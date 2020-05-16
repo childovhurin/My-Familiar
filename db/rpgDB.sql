@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS rpgDB;
+CREATE database rpgDB;
+
+USE rpgDB;
