@@ -2,22 +2,20 @@
   "development": {
     "username": "root",
     "password": "@Burrito61",
-    "database": "passport_demo",
+    "database": "rpgDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "@Burrito61",
-    "database": "database_test",
+    "database": "rpgDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "@Burrito61",
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable":"JAWSDB_URL",
     "dialect": "mysql"
   }
 }
+
