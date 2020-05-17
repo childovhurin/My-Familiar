@@ -1,16 +1,321 @@
-<h1>Update the quote with an id of {{this.id}}</h1>
+<form class="charsheet">
+    <!-- HEADER HERE - FIT TO WIDTH OF 70% SCREEN? -->
+    <header>
+      <section class="charname">
+        <label for="charname">Character Name</label>
+        <input type="text" id="charname" name="charname" value="{{character_name}}" />
+      </section>
+        <section class="basics">
+          <ul>
+          <li>
+            <label for="class">Class</label>
+            <input type="text" id="class" name="class" value="{{character_class}}" />
+          </li>
+          <li>
+            <label for="level">Level</label>
+            <input type="text" id="level" name="level" value="{{character_level}}" />
+          </li>
+          <li>
+            <label for="race">Race</label>
+            <input type="text" id="race" name="race" value="{{character_race}}" />
+          </li>
+          <li>
+            <label for="alignment">Alignment</label>
+            <input type="text" id="alignment" name="alignment" value="{{character_alignment}}" />
+          </li>
+          <li>
+            <label for="experiencepoints">Experience Points</label>
+            <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" />
+          </li>
+          </ul>
+      </section>
+    </header>
+    <!-- HEADER ENDS HERE -->
 
-<form data-id="{{this.id}}" class="update-form">
+    <!-- MAIN BODY OF CHARACTER SHEET STARTS HERE -->
+    
+    <!-- DIVIDE INTO 4 COLUMNS -->
+    <main>
+      <section>
+        <section class="attributes">
+            <!-- SCORES ALIGNED TO THE LEFT OF THE SHEET -->
+          <div class="scores">
+            <ul>
+              <li>
+                <div class="score">
+                  <label for="basestrength">Strength</label>
+                  <input type="text" id="basestrength" name="basestrength" placeholder="10" value="{{base_strength}}"/>
+                </div>
+                <!-- modifier is commented out for now since we don't have those values represented in the db -->
+                <!-- <div class="modifier">
+                  <input name="strengthmod" placeholder="+0" class="strengthmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="dexterity">Dexterity</label>
+                  <input type="text" id="dexterity" name="dexterity" placeholder="10" value="{{base_dex}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Dexteritymod" placeholder="+0" class=statmod/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="constitution">Constitution</label>
+                  <input type="text" id="constitution" name="constitution" placeholder="10" value="{{base_con}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Constitutionmod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="intelligence">Intelligence</label>
+                  <input type="text" id="intelligence" name="intelligence" placeholder="10" value="{{base_int}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Intelligencemod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="wisdom">Wisdom</label>
+                  <input type="text" id="wisdom" name="wisdom" placeholder="10" value="{{base_wisdom}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Wisdommod" placeholder="+0" />
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="charisma">Charisma</label>
+                  <input type="text" id="charisma" name="charisma" placeholder="10" value="{{base_charisma}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Charismamod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="current_hitpoints">Current Hit Points</label>
+                  <input type="text" id="current_hitpoints" name="current_hitpoints" placeholder="10" value="{{current_hitpoints}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Currenthitpointsmod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="armor_class">Armor Class</label>
+                  <input type="text" id="armor_class" name="armor_class" placeholder="10" value="{{armor_class}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Armorclassmod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="initiative">Initiative</label>
+                  <input type="text" id="initiative" name="initiative" placeholder="10" value="{{initiative}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Initiativemod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                    <div>
+                      <label for="base_speed">Speed</label>
+                      <input name="base_speed"  value="{{base_speed}}" type="text" />
+                    </div>
+                <!-- <div class="modifier">
+                  <input name="Basespeedmod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="hit_die">Hit Die</label>
+                  <input type="text" id="hit_die" name="hit_die" placeholder="10" value="{{hit_die}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Hitdiemod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+              <li>
+                <div class="score">
+                  <label for="languages">Languages</label>
+                  <input type="text" id="languages" name="languages" placeholder="10" value="{{languages}}"/>
+                </div>
+                <!-- <div class="modifier">
+                  <input name="Hitdiemod" placeholder="+0" class="statmod"/>
+                </div> -->
+              </li>
+            </ul>
 
-  <div class="form-group">
-    <label for="auth">Author:</label>
-    <input type="text" id="auth" name="author" value="{{this.author}}">
-  </div>
+            <!-- SKILLS BOX STARTS HERE -->
+            <div class="rpg_character_skills list-section box">
+              <ul>
+                  <li>
+                    <label for="acrobatics">Acrobatics <span class="skill">(Dex)</span></label>
+                    <input type="text" id="acrobatics" name="acrobatics" placeholder="+0" value="{{acrobatics}}" />
+                  </li>
+                  <li>
+                    <label for="animalhandling">Animal Handling <span class="skill">(Wis)</span></label>
+                    <input type="text" id="animalhandling" name="animalhandling" placeholder="+0" value="{{animal_handling}}" />
+                  </li>
+                  <li>
+                    <label for="arcana">Arcana <span class="skill">(Int)</span></label>
+                    <input type="text" id="arcana" name="arcana" placeholder="+0" value="{{arcana}}" />
+                  </li>
+                  <li>
+                    <label for="athletics">Athletics <span class="skill">(Str)</span></label>
+                    <input type="text" id="athletics" name="athletics" placeholder="+0" value="{{athletics}}" />
+                  </li>
+                  <li>
+                    <label for="deception">Deception <span class="skill">(Cha)</span></label>
+                    <input type="text" id="deception" name="deception" placeholder="+0" value="{{deception}}" />
+                  </li>
+                  <li>
+                    <label for="history">History <span class="skill">(Int)</span></label>
+                    <input type="text" id="history" name="history" placeholder="+0" value="{{history}}" />
+                  </li>
+                  <li>
+                    <label for="insight">Insight <span class="skill">(Wis)</span></label>
+                    <input type="text" id="insight" name="insight" placeholder="+0" value="{{insight}}" />
+                  </li>
+                  <li>
+                    <label for="intimidation">Intimidation <span class="skill">(Cha)</span></label>
+                    <input type="text" id="intimidation" name="intimidation" placeholder="+0" value="{{intimidation}}" />
+                  </li>
+                  <li>
+                    <label for="investigation">Investigation <span class="skill">(Int)</span></label>
+                    <input type="text" id="investigation" name="investigation" placeholder="+0" value="{{investigation}}" />
+                  </li>
+                  <li>
+                    <label for="medicine">Medicine <span class="skill">(Wis)</span></label>
+                    <input type="text" id="medicine" name="medicine" placeholder="+0" value="{{medicine}}" />
+                  </li>
+                  <li>
+                    <label for="nature">Nature <span class="skill">(Int)</span></label>
+                    <input type="text" id="nature" name="nature" placeholder="+0" value="{{nature}}" />
+                  </li>
+                  <li>
+                    <label for="perception">Perception <span class="skill">(Wis)</span></label>
+                    <input type="text" id="perception" name="perception" placeholder="+0" value="{{perception}}" />
+                  </li>
+                  <li>
+                    <label for="performance">Performance <span class="skill">(Cha)</span></label>
+                    <input type="text" id="performance" name="performance" placeholder="+0" value="{{performance}}" />
+                  </li>
+                  <li>
+                    <label for="persuasion">Persuasion <span class="skill">(Cha)</span></label>
+                    <input type="text" id="persuasion" name="persuasion" placeholder="+0" value="{{persuasion}}" />
+                  </li>
+                  <li>
+                    <label for="religion">Religion <span class="skill">(Int)</span></label>
+                    <input type="text" id="religion" name="religion" placeholder="+0" value="{{religion}}" />
+                  </li>
+                  <li>
+                    <label for="sleight_of_hand">Sleight of Hand <span class="skill">(Dex)</span></label>
+                    <input type="text" id="sleight_of_hand" name="sleight_of_hand" placeholder="+0" value="{{sleight_of_hand}}" />
+                  </li>
+                  <li>
+                    <label for="stealth">Stealth <span class="skill">(Dex)</span></label>
+                    <input type="text" id="stealth" name="stealth" placeholder="+0" value="{{stealth}}" />
+                  </li>
+                  <li>
+                    <label for="survival">Survival <span class="skill">(Wis)</span></label>
+                    <input type="text" id="survival" name="survival" placeholder="+0" value="{{survival}}" />
+                  </li>
+              </ul>
+              <div class="label">
+                SKILLS
+              </div>
+            </div>
+          </div>
+          <!-- Skills box ends here -->
+        </section>
 
-  <div class="form-group">
-    <label for="quo">Quote:</label>
-    <textarea id="quo" name="quote" rows="8" cols="40">{{this.quote}}</textarea>
-  </div>
+        <!-- CHARACTER DETAILS STARTS HERE -->
+        <section>
+            <section class="character_details">
+              <div class="personality_traits">
+                <label for="personality_traits">Personality Traits</label>
+                <textarea name="personality_traits" value="{{personality_traits}}"></textarea>
+              </div>
+              <div class="ideals">
+                <label for="ideals">Ideals</label>
+                <textarea name="ideals" value="{{ideals}}"></textarea>
+              </div>
+              <div class="bonds">
+                <label for="bonds">Bonds</label>
+                <textarea name="bonds" value="{{bonds}}"></textarea>
+              </div>
+              <div class="flaws">
+                <label for="flaws">Flaws</label>
+                <textarea name="flaws" value="{{flaws}}"></textarea>
+              </div>
+            </section>
+            <section class="features">
+              <div>
+                <label for="features">Features & Traits</label><textarea name="features"></textarea>
+              </div>
+            </section>
+          </section>
+          <!-- CHARACTER DETAILS ENDS HERE -->
 
-  <button type="submit">Update Quote</button>
+          <!-- CHARACTER WEAPONS AND SPELLS HERE -->
+          <section class="attacksandspellcasting">
+            <div>
+              <label>Attacks & Spellcasting</label>
+              <li>
+                  <label for="weapon">Weapon</label>
+                  <input type="text" id="weapon" name="weapon" placeholder="10" value="{{weapon}}"/>
+                </div>
+                   <div class="modifier">
+                       <label for="attack_bonus">Attack Bonus</label>
+                  <input name="attack_bonus" placeholder="+0" value="{{attack_bonus}}"/>
+                </div>
+                <div class="modifier">
+                    <label for="damage">Damage</label>
+               <input name="damage" placeholder="+0" value="{{damage}}"/>
+             </div>
+             <div class="modifier">
+                <label for="damage_type">Damage Type</label>
+           <input name="damage_type" placeholder="+0" value="{{damage_type}}"/>
+            </div>
+            <div class="spells">
+                <label for="spell_name">Spell Name</label>
+                <textarea name="spell_name" value="{{spell_name}}"></textarea>
+              </div>
+                <label for="spell_id">Spell ID</label>
+                <input type="text" id="spell_id" name="spell_id" value="{{spell_id}}" />
+              <div class="spell_type">
+                <label for="spell_type">Spell Type</label>
+                <textarea name="spell_type" value="{{spell_type}}"></textarea>
+              </div>
+              <div class="spell_level">
+                <label for="spell_level">Spell Level</label>
+                <input name="spell_level" placeholder="+0" value="{{spell_level}}"/>
+              </div>
+           <div class="casting_time">
+            <label for="casting_time">Casting Time</label>
+           <input name="casting_time" placeholder="+0" value="{{casting_time}}"/>
+              </div>
+              <div class="spell_range">
+                <label for="spell_range">Spell Range</label>
+                <textarea name="spell_range" value="{{spell_range}}"></textarea>
+              </div>
+              <div class="spell_components">
+                <label for="spell_components">Spell Components</label>
+                <textarea name="spell_components" value="{{spell_components}}"></textarea>
+              </div>
+              <div class="spell_duration">
+                <label for="spell_duration">Spell Duration</label>
+                <textarea name="spell_duration" value="{{spell_duration}}"></textarea>
+              </div>
+           </section>
+        </section>
+    </main>
 </form>
