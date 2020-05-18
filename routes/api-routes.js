@@ -57,10 +57,18 @@ module.exports = function (app) {
     res.render("create-character")
   });
 
-   //Route for loading view-character.handlebars
-   app.get("/view-character", (req, res) => {
+  //Route for loading view-character.handlebars
+  app.get("/view-character", (req, res) => {
     //add in character view stuff here
     res.render("view-character")
+  });
+
+  // Route for creating a new character
+  app.post("/api/characters", (req, res) => {
+    db.RpgCharacter.create(req.body)
+      .then((dbCharacter) => {
+        res.json(dbCharacter)
+      })
   });
 };
 
