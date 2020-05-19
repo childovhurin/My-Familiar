@@ -25,7 +25,7 @@
           </li>
           <li>
             <label for="experiencepoints">Experience Points</label>
-            <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" />
+            <input type="text" id="experiencepoints" name="experiencepoints"/>
           </li>
           </ul>
       </section>
@@ -242,24 +242,25 @@
             <section class="character_details">
               <div class="personality_traits">
                 <label for="personality_traits">Personality Traits</label>
-                <textarea name="personality_traits" value="{{personality_traits}}"></textarea>
+                <textarea name="personality_traits" id="personality_traits" value="{{personality_traits}}"></textarea>
               </div>
               <div class="ideals">
                 <label for="ideals">Ideals</label>
-                <textarea name="ideals" value="{{ideals}}"></textarea>
+                <textarea name="ideals" id="ideals" value="{{ideals}}"></textarea>
               </div>
               <div class="bonds">
                 <label for="bonds">Bonds</label>
-                <textarea name="bonds" value="{{bonds}}"></textarea>
+                <textarea name="bonds" id="bonds" value="{{bonds}}"></textarea>
               </div>
               <div class="flaws">
                 <label for="flaws">Flaws</label>
-                <textarea name="flaws" value="{{flaws}}"></textarea>
+                <textarea name="flaws" id="flaws" value="{{flaws}}"></textarea>
               </div>
             </section>
             <section class="features">
               <div>
-                <label for="features">Features & Traits</label><textarea name="features"></textarea>
+                <label for="features">Features & Traits</label>
+                <textarea name="features" id="features"></textarea>
               </div>
             </section>
           </section>
@@ -275,45 +276,45 @@
                 </div>
                    <div class="modifier">
                        <label for="attack_bonus">Attack Bonus</label>
-                  <input name="attack_bonus" placeholder="+0" value="{{attack_bonus}}"/>
+                  <input name="attack_bonus" id="attack_bonus" placeholder="+0" value="{{attack_bonus}}"/>
                 </div>
                 <div class="modifier">
                     <label for="damage">Damage</label>
-               <input name="damage" placeholder="+0" value="{{damage}}"/>
+               <input name="damage" id="damage" placeholder="+0" value="{{damage}}"/>
              </div>
              <div class="modifier">
                 <label for="damage_type">Damage Type</label>
-           <input name="damage_type" placeholder="+0" value="{{damage_type}}"/>
+           <input name="damage_type" id="damage_type" placeholder="+0" value="{{damage_type}}"/>
             </div>
             <div class="spells">
                 <label for="spell_name">Spell Name</label>
-                <textarea name="spell_name" value="{{spell_name}}"></textarea>
+                <textarea name="spell_name" id="spell_name" value="{{spell_name}}"></textarea>
               </div>
                 <label for="spell_id">Spell ID</label>
                 <input type="text" id="spell_id" name="spell_id" value="{{spell_id}}" />
               <div class="spell_type">
                 <label for="spell_type">Spell Type</label>
-                <textarea name="spell_type" value="{{spell_type}}"></textarea>
+                <textarea name="spell_type" id="spell_type" value="{{spell_type}}"></textarea>
               </div>
               <div class="spell_level">
                 <label for="spell_level">Spell Level</label>
-                <input name="spell_level" placeholder="+0" value="{{spell_level}}"/>
+                <input name="spell_level" id="spell_level" placeholder="+0" value="{{spell_level}}"/>
               </div>
            <div class="casting_time">
             <label for="casting_time">Casting Time</label>
-           <input name="casting_time" placeholder="+0" value="{{casting_time}}"/>
+           <input name="casting_time" id="casting_time" placeholder="+0" value="{{casting_time}}"/>
               </div>
               <div class="spell_range">
                 <label for="spell_range">Spell Range</label>
-                <textarea name="spell_range" value="{{spell_range}}"></textarea>
+                <textarea name="spell_range" id="spell_range" value="{{spell_range}}"></textarea>
               </div>
               <div class="spell_components">
                 <label for="spell_components">Spell Components</label>
-                <textarea name="spell_components" value="{{spell_components}}"></textarea>
+                <textarea name="spell_components" id="spell_components" value="{{spell_components}}"></textarea>
               </div>
               <div class="spell_duration">
                 <label for="spell_duration">Spell Duration</label>
-                <textarea name="spell_duration" value="{{spell_duration}}"></textarea>
+                <textarea name="spell_duration" id="spell_duration" value="{{spell_duration}}"></textarea>
               </div>
            </section>
         </section>
