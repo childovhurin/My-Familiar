@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "2.4.3",
-    "express": "^4.17.1",
+    "express": "^4.17.0",
+    "express-handlebars": "^4.0.4",
     "express-session": "^1.16.1",
     "index": "^0.4.0",
     "mysql": "^2.18.1",
