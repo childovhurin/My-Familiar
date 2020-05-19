@@ -51,16 +51,38 @@ module.exports = function (app) {
     }
   });
 
-  //Route for loading create-character.handlebars
+  // Route for loading create-character.handlebars
   app.get("/create-character", (req, res) => {
     //add in character creation stuff here
     res.render("create-character")
   });
 
-   //Route for loading view-character.handlebars
-   app.get("/view-character", (req, res) => {
+  // Route for loading view-character.handlebars
+  app.get("/view-character", (req, res) => {
     //add in character view stuff here
     res.render("view-character")
   });
+
+  // Route for creating a new character
+  app.post("/api/characters", (req, res) => {
+    db.RpgCharacter.create(req.body)
+      .then((dbCharacter) => {
+        res.json(dbCharacter);
+      });
+  });
+
+  // Route for getting characters by UserId
+  app.get("/api/characters/:userId", (req, res) => {
+    console.log(req);
+    db.RpgCharacter.findAll({
+      where: {
+        UserId: req.params.userId
+      }
+    })
+      .then((allCharacters) => {
+        res.json(allCharacters);
+      })
+  })
 };
+
 

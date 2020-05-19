@@ -3,6 +3,7 @@ var express = require("express");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+const path = require("path");
 
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
@@ -12,7 +13,7 @@ var db = require("./models");
 var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 //Requiring handlebars and setting it as the engine
 const exphbs = require("express-handlebars");
