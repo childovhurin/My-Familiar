@@ -1,139 +1,140 @@
-<form class="charsheet">
-    <!-- HEADER HERE - FIT TO WIDTH OF 70% SCREEN? -->
-    <header>
-      <section class="charname">
-        <label for="charname">Character Name</label>
-        <input type="text" id="charname" name="charname" value="{{character_name}}" />
-      </section>
-        <section class="basics">
-          <ul>
-          <li>
-            <label for="class">Class</label>
-            <input type="text" id="class" name="class" value="{{character_class}}" />
-          </li>
-          <li>
-            <label for="level">Level</label>
-            <input type="text" id="level" name="level" value="{{character_level}}" />
-          </li>
-          <li>
-            <label for="race">Race</label>
-            <input type="text" id="race" name="race" value="{{character_race}}" />
-          </li>
-          <li>
-            <label for="alignment">Alignment</label>
-            <input type="text" id="alignment" name="alignment" value="{{character_alignment}}" />
-          </li>
-          <li>
-            <label for="experiencepoints">Experience Points</label>
-            <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" />
-          </li>
-          </ul>
-      </section>
-    </header>
-    <!-- HEADER ENDS HERE -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+<!-- Character Name -->
+<!-- 
+  <div class="container">
+  <div class="row">
+      <div class="col-md-6">
+         <div class="card" style="width: 30rem;">
+        <label for="charname">Character Name:</label>
+        <input type="text" id="charname" name="charname" value="{{character_name}}" />
+    </div>
+      </div>
+      <div class="col-md-3"><div class="card">
+      <ul class="list-group list-group-flush">
+        <div class="container">
+          <div class="row"> 
+        <li class="list-group-item"><label for="class">Class:</label>
+          <input type="text" id="class" name="class" value="{{character_class}}" /></li>
+        <li class="list-group-item"><label for="level">Level:</label>
+          <input type="text" id="level" name="level" value="{{character_level}}" /></li>
+          </div>
+          </div>
+        <div class="container"> 
+          <div class="row">
+        <li class="list-group-item"><label for="race">Race:</label>
+          <input type="text" id="race" name="race" value="{{character_race}}" /></li>
+        <li class="list-group-item"><label for="alignment">Alignment:</label>
+          <input type="text" id="alignment" name="alignment" value="{{character_alignment}}" /></li>
+        </div>
+          </div>      
+        <li class="list-group-item"><label for="experiencepoints">Experience Points:</label>
+          <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" /></li>
+      </ul></div>
+  </div>
+  <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-2"></div>
+  </div>
+  <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5"></div>
+  </div>
+</div> 
+--> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+    <div class="card" style="width: 30rem;">
+        <label for="charname">Character Name:</label>
+        <input type="text" id="charname" name="charname" value="{{character_name}}" />
+    </div>
+    </div>       
+      <!-- Basics -->
+      <div class="col-sm-6">
+      <div class="card">
+      <ul class="list-group list-group-flush">
+        <div class="container">
+          <div class="row">
+        <li class="list-group-item"><label for="class">Class:</label>
+          <input type="text" id="class" name="class" value="{{character_class}}" /></li>
+        <li class="list-group-item"><label for="level">Level:</label>
+          <input type="text" id="level" name="level" value="{{character_level}}" /></li>
+          </div>
+          </div>
+        <div class="container"> 
+          <div class="row">
+        <li class="list-group-item"><label for="race">Race:</label>
+          <input type="text" id="race" name="race" value="{{character_race}}" /></li>
+        <li class="list-group-item"><label for="alignment">Alignment:</label>
+          <input type="text" id="alignment" name="alignment" value="{{character_alignment}}" /></li>
+        </div>
+          </div>      
+        <li class="list-group-item"><label for="experiencepoints">Experience Points:</label>
+          <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" /></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
     <!-- MAIN BODY OF CHARACTER SHEET STARTS HERE -->
-    
-    <!-- DIVIDE INTO 4 COLUMNS -->
-    <main>
-      <section>
-        <section class="attributes">
+    <!-- <main> -->
             <!-- SCORES ALIGNED TO THE LEFT OF THE SHEET -->
-          <div class="scores">
-            <ul>
-              <li>
+      <div class="container">
+        <div class="col-3">  
+         <div class="row">
                 <div class="score">
-                  <label for="basestrength">Strength</label>
+                  <label for="basestrength">Strength:</label>
                   <input type="text" id="basestrength" name="basestrength" placeholder="10" value="{{base_strength}}"/>
                 </div>
-                <!-- modifier is commented out for now since we don't have those values represented in the db -->
-                <!-- <div class="modifier">
-                  <input name="strengthmod" placeholder="+0" class="strengthmod"/>
-                </div> -->
-              </li>
-              <li>
-                <div class="score">
-                  <label for="dexterity">Dexterity</label>
+          </div>
+            <div class="row">
+                  <label for="dexterity">Dexterity:</label>
                   <input type="text" id="dexterity" name="dexterity" placeholder="10" value="{{base_dex}}"/>
                 </div>
-                <!-- <div class="modifier">
-                  <input name="Dexteritymod" placeholder="+0" class=statmod/>
-                </div> -->
-              </li>
-              <li>
-                <div class="score">
-                  <label for="constitution">Constitution</label>
+            <div class="row">
+                  <label for="constitution">Constitution:</label>
                   <input type="text" id="constitution" name="constitution" placeholder="10" value="{{base_con}}"/>
                 </div>
-                <!-- <div class="modifier">
-                  <input name="Constitutionmod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
-                <div class="score">
-                  <label for="intelligence">Intelligence</label>
+            <div class="row">
+                  <label for="intelligence">Intelligence:</label>
                   <input type="text" id="intelligence" name="intelligence" placeholder="10" value="{{base_int}}"/>
-                </div>
-                <!-- <div class="modifier">
-                  <input name="Intelligencemod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
-                <div class="score">
-                  <label for="wisdom">Wisdom</label>
+            </div>
+                  <div class="row">
+                  <label for="wisdom">Wisdom:</label>
                   <input type="text" id="wisdom" name="wisdom" placeholder="10" value="{{base_wisdom}}"/>
-                </div>
-                <!-- <div class="modifier">
-                  <input name="Wisdommod" placeholder="+0" />
-                </div> -->
-              </li>
-              <li>
-                <div class="score">
-                  <label for="charisma">Charisma</label>
+            </div>
+                  <div class="row">
+                  <label for="charisma">Charisma:</label>
                   <input type="text" id="charisma" name="charisma" placeholder="10" value="{{base_charisma}}"/>
-                </div>
-                <!-- <div class="modifier">
-                  <input name="Charismamod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
+            </div>
+      </div>
+      <!-- </div>  -->  
+          <!-- New Section -->
                 <div class="score">
                   <label for="current_hitpoints">Current Hit Points</label>
                   <input type="text" id="current_hitpoints" name="current_hitpoints" placeholder="10" value="{{current_hitpoints}}"/>
                 </div>
-                <!-- <div class="modifier">
-                  <input name="Currenthitpointsmod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
                 <div class="score">
                   <label for="armor_class">Armor Class</label>
                   <input type="text" id="armor_class" name="armor_class" placeholder="10" value="{{armor_class}}"/>
                 </div>
-                <!-- <div class="modifier">
-                  <input name="Armorclassmod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
+              </div>
+            </div>
+            </div>
                 <div class="score">
                   <label for="initiative">Initiative</label>
                   <input type="text" id="initiative" name="initiative" placeholder="10" value="{{initiative}}"/>
                 </div>
-                <!-- <div class="modifier">
-                  <input name="Initiativemod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
                 <div class="score">
                     <div>
                       <label for="base_speed">Speed</label>
                       <input name="base_speed"  value="{{base_speed}}" type="text" />
                     </div>
-                <!-- <div class="modifier">
-                  <input name="Basespeedmod" placeholder="+0" class="statmod"/>
-                </div> -->
-              </li>
-              <li>
                 <div class="score">
                   <label for="hit_die">Hit Die</label>
                   <input type="text" id="hit_die" name="hit_die" placeholder="10" value="{{hit_die}}"/>
@@ -146,13 +147,13 @@
                 <div class="score">
                   <label for="languages">Languages</label>
                   <input type="text" id="languages" name="languages" placeholder="10" value="{{languages}}"/>
-                </div>
+                </div>          
+     </div>              
                 <!-- <div class="modifier">
                   <input name="Hitdiemod" placeholder="+0" class="statmod"/>
                 </div> -->
               </li>
             </ul>
-
             <!-- SKILLS BOX STARTS HERE -->
             <div class="rpg_character_skills list-section box">
               <ul>
@@ -317,5 +318,6 @@
               </div>
            </section>
         </section>
-    </main>
+    <!-- </main> -->
 </form>
+</div>
