@@ -17,3 +17,4 @@ function createNewCharacter(event) {
             console.log(data);
         });
 };
+
