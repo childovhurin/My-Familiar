@@ -24,7 +24,7 @@ $("#create-character").on("click", () => {
 });
 
 // Route to get all character names
-$("#view-character").one("click", () => {
+$("#view-character").on("click", () => {
   $.get("/api/user_data")
     .then((data) => {
       console.log(data.id);
