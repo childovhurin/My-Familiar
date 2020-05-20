@@ -8,6 +8,13 @@ $("#new-character-submit").on("click", createNewCharacter);
 $("#create-new-character").on("click", () => window.location.href = `/create-character?user_id=${userID}`);
 $("#view-character").on("click", () => window.location.href = `/view-character?user_id=${userID}`);
 
+//Route to generate a random number from the d20 dice click 
+$("#d20").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 20) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+
 // // Function to create and post a new character
 function createNewCharacter(event) {
     event.preventDefault();
