@@ -70,11 +70,4 @@ io.on('connection', socket => {
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
   server.listen(PORT, () => console.log(`Server running on port ${PORT}.`));
-  // app.listen(PORT, function() {
-  //   console.log(
-  //     "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-  //     PORT,
-  //     PORT
-  //   );
-  // });
 });

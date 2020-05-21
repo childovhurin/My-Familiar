@@ -23,6 +23,7 @@ chatSubmit.addEventListener('click', (e) => {
 
 //get username
 usernameSubmit.addEventListener('click', () => {
+    console.log("clicked");
     const newUsername = document.getElementById('username-input').value;
     socket.emit('newUser', newUsername);
 });

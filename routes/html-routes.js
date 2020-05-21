@@ -34,11 +34,11 @@ module.exports = function (app) {
     res.render("create-character");
   });
 
-  // Route for view-character.handlebars
-  app.get("/view-character", (req, res) => {
-    console.log("GOT TO THE VIEW-CHARACTER CALLBACK");
-    res.render("view-character");
-  });
+  // // Route for view-character.handlebars
+  // app.get("/view-character", (req, res) => {
+  //   console.log("GOT TO THE VIEW-CHARACTER CALLBACK");
+  //   res.render("view-character");
+  // });
 
   // Route for chat
   app.get("/chat", (req, res) => {

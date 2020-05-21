@@ -32,15 +32,15 @@ $(document).ready(function () {
 
             // Routes to view-character page
             $(".character-card").on("click", (e) => {
-              $.get("/api/characters/" + $(e.target).attr("data-charid"))
-              .then((data) => {
-                console.log(JSON.stringify(data));
-                // window.location.href = "/view-character?charid=" + $(e.target).attr("data-charid");
+              // $.get("/api/characters/" + $(e.target).attr("data-charid"))
+              // .then(() => {
+              //   console.log(JSON.stringify(data));
+                window.location.href = "/view-character?charid=" + $(e.target).attr("data-charid");
               // .then(() => window.location.href = "/view-character/" + $(e.target).attr("data-charid"));
               // .then(() => window.location.href = "/view-character");
               // console.log($(e.target).attr("data-charid"))
               // .then(() => window.location.href = "/view-character?char_id=" + $(e.target).attr("data-charid"));
-            });
+            // });
           });
       });
   });

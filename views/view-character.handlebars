@@ -2,30 +2,30 @@
     <!-- HEADER HERE - FIT TO WIDTH OF 70% SCREEN? -->
     <header>
       <section class="charname">
-        <label for="charname">{{characterName}}</label>
-        <input type="text" id="charname" name="charname" value="{{parsedData.characterName}}" />
+        <label for="charname">Character Name</label>
+        <input type="text" id="charname" name="charname" value="{{characterName}}" />
       </section>
         <section class="basics">
           <ul>
           <li>
             <label for="class">Class</label>
-            <input type="text" id="class" name="class" value="{{character_class}}" />
+            <input type="text" id="class" name="class" value="{{class}}" />
           </li>
           <li>
             <label for="level">Level</label>
-            <input type="text" id="level" name="level" value="{{character_level}}" />
+            <input type="text" id="level" name="level" value="{{level}}" />
           </li>
           <li>
             <label for="race">Race</label>
-            <input type="text" id="race" name="race" value="{{character_race}}" />
+            <input type="text" id="race" name="race" value="{{race}}" />
           </li>
           <li>
             <label for="alignment">Alignment</label>
-            <input type="text" id="alignment" name="alignment" value="{{character_alignment}}" />
+            <input type="text" id="alignment" name="alignment" value="{{alignment}}" />
           </li>
           <li>
             <label for="experiencepoints">Experience Points</label>
-            <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" />
+            <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experiencePoints}}" />
           </li>
           </ul>
       </section>
@@ -44,7 +44,7 @@
               <li>
                 <div class="score">
                   <label for="basestrength">Strength</label>
-                  <input type="text" id="basestrength" name="basestrength" placeholder="10" value="{{base_strength}}"/>
+                  <input type="text" id="basestrength" name="basestrength" placeholder="10" value="{{baseStrength}}"/>
                 </div>
                 <!-- modifier is commented out for now since we don't have those values represented in the db -->
                 <!-- <div class="modifier">
@@ -54,7 +54,7 @@
               <li>
                 <div class="score">
                   <label for="dexterity">Dexterity</label>
-                  <input type="text" id="dexterity" name="dexterity" placeholder="10" value="{{base_dex}}"/>
+                  <input type="text" id="dexterity" name="dexterity" placeholder="10" value="{{dexterity}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Dexteritymod" placeholder="+0" class=statmod/>
@@ -63,7 +63,7 @@
               <li>
                 <div class="score">
                   <label for="constitution">Constitution</label>
-                  <input type="text" id="constitution" name="constitution" placeholder="10" value="{{base_con}}"/>
+                  <input type="text" id="constitution" name="constitution" placeholder="10" value="{{constitution}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Constitutionmod" placeholder="+0" class="statmod"/>
@@ -72,7 +72,7 @@
               <li>
                 <div class="score">
                   <label for="intelligence">Intelligence</label>
-                  <input type="text" id="intelligence" name="intelligence" placeholder="10" value="{{base_int}}"/>
+                  <input type="text" id="intelligence" name="intelligence" placeholder="10" value="{{intelligence}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Intelligencemod" placeholder="+0" class="statmod"/>
@@ -81,7 +81,7 @@
               <li>
                 <div class="score">
                   <label for="wisdom">Wisdom</label>
-                  <input type="text" id="wisdom" name="wisdom" placeholder="10" value="{{base_wisdom}}"/>
+                  <input type="text" id="wisdom" name="wisdom" placeholder="10" value="{{wisdom}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Wisdommod" placeholder="+0" />
@@ -90,7 +90,7 @@
               <li>
                 <div class="score">
                   <label for="charisma">Charisma</label>
-                  <input type="text" id="charisma" name="charisma" placeholder="10" value="{{base_charisma}}"/>
+                  <input type="text" id="charisma" name="charisma" placeholder="10" value="{{charisma}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Charismamod" placeholder="+0" class="statmod"/>
@@ -99,7 +99,7 @@
               <li>
                 <div class="score">
                   <label for="current_hitpoints">Current Hit Points</label>
-                  <input type="text" id="current_hitpoints" name="current_hitpoints" placeholder="10" value="{{current_hitpoints}}"/>
+                  <input type="text" id="current_hitpoints" name="current_hitpoints" placeholder="10" value="{{currentHitPoints}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Currenthitpointsmod" placeholder="+0" class="statmod"/>
@@ -108,7 +108,7 @@
               <li>
                 <div class="score">
                   <label for="armor_class">Armor Class</label>
-                  <input type="text" id="armor_class" name="armor_class" placeholder="10" value="{{armor_class}}"/>
+                  <input type="text" id="armor_class" name="armor_class" placeholder="10" value="{{armorClass}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Armorclassmod" placeholder="+0" class="statmod"/>
@@ -127,7 +127,7 @@
                 <div class="score">
                     <div>
                       <label for="base_speed">Speed</label>
-                      <input name="base_speed"  value="{{base_speed}}" type="text" />
+                      <input name="base_speed"  value="{{speed}}" type="text" />
                     </div>
                 <!-- <div class="modifier">
                   <input name="Basespeedmod" placeholder="+0" class="statmod"/>
@@ -136,7 +136,7 @@
               <li>
                 <div class="score">
                   <label for="hit_die">Hit Die</label>
-                  <input type="text" id="hit_die" name="hit_die" placeholder="10" value="{{hit_die}}"/>
+                  <input type="text" id="hit_die" name="hit_die" placeholder="10" value="{{hitDie}}"/>
                 </div>
                 <!-- <div class="modifier">
                   <input name="Hitdiemod" placeholder="+0" class="statmod"/>
@@ -162,7 +162,7 @@
                   </li>
                   <li>
                     <label for="animalhandling">Animal Handling <span class="skill">(Wis)</span></label>
-                    <input type="text" id="animalhandling" name="animalhandling" placeholder="+0" value="{{animal_handling}}" />
+                    <input type="text" id="animalhandling" name="animalhandling" placeholder="+0" value="{{animalHandling}}" />
                   </li>
                   <li>
                     <label for="arcana">Arcana <span class="skill">(Int)</span></label>
@@ -218,7 +218,7 @@
                   </li>
                   <li>
                     <label for="sleight_of_hand">Sleight of Hand <span class="skill">(Dex)</span></label>
-                    <input type="text" id="sleight_of_hand" name="sleight_of_hand" placeholder="+0" value="{{sleight_of_hand}}" />
+                    <input type="text" id="sleight_of_hand" name="sleight_of_hand" placeholder="+0" value="{{sleightOfHand}}" />
                   </li>
                   <li>
                     <label for="stealth">Stealth <span class="skill">(Dex)</span></label>
@@ -242,7 +242,7 @@
             <section class="character_details">
               <div class="personality_traits">
                 <label for="personality_traits">Personality Traits</label>
-                <textarea name="personality_traits" value="{{personality_traits}}"></textarea>
+                <textarea name="personality_traits" value="{{personalityTraits}}"></textarea>
               </div>
               <div class="ideals">
                 <label for="ideals">Ideals</label>
@@ -259,7 +259,8 @@
             </section>
             <section class="features">
               <div>
-                <label for="features">Features & Traits</label><textarea name="features"></textarea>
+                <label for="features">Features & Traits</label>
+                <textarea name="features" value="{{featuresAndTraits}}"></textarea>
               </div>
             </section>
           </section>
@@ -275,7 +276,7 @@
                 </div>
                    <div class="modifier">
                        <label for="attack_bonus">Attack Bonus</label>
-                  <input name="attack_bonus" placeholder="+0" value="{{attack_bonus}}"/>
+                  <input name="attack_bonus" placeholder="+0" value="{{attackBonus}}"/>
                 </div>
                 <div class="modifier">
                     <label for="damage">Damage</label>
@@ -283,39 +284,41 @@
              </div>
              <div class="modifier">
                 <label for="damage_type">Damage Type</label>
-           <input name="damage_type" placeholder="+0" value="{{damage_type}}"/>
+           <input name="damage_type" placeholder="+0" value="{{damageType}}"/>
             </div>
             <div class="spells">
                 <label for="spell_name">Spell Name</label>
-                <textarea name="spell_name" value="{{spell_name}}"></textarea>
+                <textarea name="spell_name" value="{{spellName}}"></textarea>
               </div>
                 <label for="spell_id">Spell ID</label>
-                <input type="text" id="spell_id" name="spell_id" value="{{spell_id}}" />
+                <input type="text" id="spell_id" name="spell_id" value="{{spellID}}" />
               <div class="spell_type">
                 <label for="spell_type">Spell Type</label>
-                <textarea name="spell_type" value="{{spell_type}}"></textarea>
+                <textarea name="spell_type" value="{{spellType}}"></textarea>
               </div>
               <div class="spell_level">
                 <label for="spell_level">Spell Level</label>
-                <input name="spell_level" placeholder="+0" value="{{spell_level}}"/>
+                <input name="spell_level" placeholder="+0" value="{{spellLevel}}"/>
               </div>
            <div class="casting_time">
             <label for="casting_time">Casting Time</label>
-           <input name="casting_time" placeholder="+0" value="{{casting_time}}"/>
+           <input name="casting_time" placeholder="+0" value="{{castingTime}}"/>
               </div>
               <div class="spell_range">
                 <label for="spell_range">Spell Range</label>
-                <textarea name="spell_range" value="{{spell_range}}"></textarea>
+                <textarea name="spell_range" value="{{spellRange}}"></textarea>
               </div>
               <div class="spell_components">
                 <label for="spell_components">Spell Components</label>
-                <textarea name="spell_components" value="{{spell_components}}"></textarea>
+                <textarea name="spell_components" value="{{spellComponents}}"></textarea>
               </div>
               <div class="spell_duration">
                 <label for="spell_duration">Spell Duration</label>
-                <textarea name="spell_duration" value="{{spell_duration}}"></textarea>
+                <textarea name="spell_duration" value="{{spellDuration}}"></textarea>
               </div>
            </section>
         </section>
+        <button id="delete_character_button">Delete This Character</button>
+        <button id="update_character_button">Update This Character</button>
     </main>
 </form>

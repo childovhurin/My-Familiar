@@ -1,22 +1,24 @@
 // Gets the user ID from the query string
-// let userID;
-// let charID;
+let userID;
+let charID;
 
-// $(document).ready(function () {
-//     const query = window.location.search.split("=")[1]
-//     const firstQueryLetter = window.location.search[1];
-//     console.log(firstQueryLetter);
-//     if (firstQueryLetter === "c") {
-//         charID = query;
-//         console.log("charID:" + charID)
-//         $.get("/api/" + charID)
-//         .then((data) => console.log(data));
-//     } else {
-//         userID = query;
-//         console.log("userID:" + userID);
-//     }
-// });
-// let userID = window.location.search.split("=")[1];
+$(document).ready(function () {
+    const query = window.location.search.split("=")[1]
+    const firstQueryLetter = window.location.search[1];
+    console.log(firstQueryLetter);
+    if (firstQueryLetter === "c") {
+        charID = query;
+        console.log("charID:" + charID)
+        $.get("/api/" + charID)
+        .then((data) => console.log(data));
+    } else {
+        userID = query;
+        console.log("userID:" + userID);
+    }
+});
+// const userID = window.location.search.split("=")[1];
+const deleteCharacterButton = $("#delete_character_button");
+const updateCharacterButton = $("#update_character_button")
 
 // Route to post a new character
 $("#new-character-submit").on("click", createNewCharacter);
