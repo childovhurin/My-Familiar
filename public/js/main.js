@@ -102,3 +102,8 @@ function createNewCharacter(event) {
             window.location.href = "/members";
         });
 };
+
+// Delete button listener
+// deleteCharacterButton.on("click", () )
+
+// Update button listener
