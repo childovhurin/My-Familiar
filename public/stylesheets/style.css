@@ -6,3 +6,18 @@ form.login {
 .character-card {
   border: 2px solid black;
 }
+
+#chat-area {
+  height: 300px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.message-text {
+  background-color: lightblue;
+  /* margin: 2px; */
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 5px;
+}
+

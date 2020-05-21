@@ -51,17 +51,43 @@ module.exports = function (app) {
     }
   });
 
-  // Route for loading create-character.handlebars
-  app.get("/create-character", (req, res) => {
-    //add in character creation stuff here
-    res.render("create-character")
+  // Route for loading character to view-character.handlebars
+  app.get("/view-character", (req, res) => {
+    console.log("params: " + req.params.charID)
+    db.RpgCharacter.findAll({
+      where: {
+        id: req.query.charid
+      }
+    })
+      .then((data) => {
+        // let characterData = JSON.stringify(data);
+        // let parsedData = data[0];
+        console.log("this is the character Data: ", data[0].dataValues);
+        // const someObject = {
+        //   test: "this is a test"
+        // }
+        res.render("view-character", data[0].dataValues);
+      });
   });
 
-  // Route for loading view-character.handlebars
-  app.get("/view-character", (req, res) => {
-    //add in character view stuff here
-    res.render("view-character")
-  });
+    // // Route for loading character to view-character.handlebars
+    // app.get("/api/characters/:charID", (req, res) => {
+    //   console.log("params: " + req.params.charID)
+    //   db.RpgCharacter.findAll({
+    //     where: {
+    //       id: req.params.charID
+    //     }
+    //   })
+    //     .then((data) => {
+    //       // let characterData = JSON.stringify(data);
+    //       // let parsedData = data[0];
+    //       console.log("this is the character Data: ", data[0].dataValues);
+    //       // const someObject = {
+    //       //   test: "this is a test"
+    //       // }
+    //       res.render("view-character", data[0].dataValues);
+    //     });
+    // });
 
   // Route for creating a new character
   app.post("/api/characters", (req, res) => {
@@ -72,8 +98,7 @@ module.exports = function (app) {
   });
 
   // Route for getting characters by UserId
-  app.get("/api/characters/:userId", (req, res) => {
-    console.log(req);
+  app.get("/api/:userId", (req, res) => {
     db.RpgCharacter.findAll({
       where: {
         UserId: req.params.userId
@@ -84,5 +109,3 @@ module.exports = function (app) {
       })
   })
 };
-
-
