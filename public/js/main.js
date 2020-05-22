@@ -9,7 +9,7 @@ $("#create-new-character").on("click", () => window.location.href = `/create-cha
 $("#view-character").on("click", () => window.location.href = `/view-character?user_id=${userID}`);
 
 //Route to generate a random number from the d20 dice click 
-$("#d20").on("click", () => { 
+$("#allDice").on("click", () => { 
     console.log("click");
     const roll = Math.floor((Math.random() * 20) + 1);
     $("#rolled-result").html(`${roll}`)
