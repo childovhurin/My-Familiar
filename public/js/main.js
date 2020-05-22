@@ -90,11 +90,6 @@ function createNewCharacter(event) {
 
     // MySQL won't allow undefined or empty strings.  This code
     //changes any undefined value or empty string to null
-    Object.keys(newCharacter).forEach((stat) => {
-        if (newCharacter[stat] === undefined || newCharacter[stat] === "") {
-            newCharacter[stat] = 0;
-        }
-    });
     // Post new character then redirect to members page
     console.log(newCharacter);
     $.post("/api/characters", newCharacter)

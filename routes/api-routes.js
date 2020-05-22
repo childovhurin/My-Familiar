@@ -70,28 +70,34 @@ module.exports = function (app) {
       });
   });
 
-    // // Route for loading character to view-character.handlebars
-    // app.get("/api/characters/:charID", (req, res) => {
-    //   console.log("params: " + req.params.charID)
-    //   db.RpgCharacter.findAll({
-    //     where: {
-    //       id: req.params.charID
-    //     }
-    //   })
-    //     .then((data) => {
-    //       // let characterData = JSON.stringify(data);
-    //       // let parsedData = data[0];
-    //       console.log("this is the character Data: ", data[0].dataValues);
-    //       // const someObject = {
-    //       //   test: "this is a test"
-    //       // }
-    //       res.render("view-character", data[0].dataValues);
-    //     });
-    // });
+  // // Route for loading character to view-character.handlebars
+  // app.get("/api/characters/:charID", (req, res) => {
+  //   console.log("params: " + req.params.charID)
+  //   db.RpgCharacter.findAll({
+  //     where: {
+  //       id: req.params.charID
+  //     }
+  //   })
+  //     .then((data) => {
+  //       // let characterData = JSON.stringify(data);
+  //       // let parsedData = data[0];
+  //       console.log("this is the character Data: ", data[0].dataValues);
+  //       // const someObject = {
+  //       //   test: "this is a test"
+  //       // }
+  //       res.render("view-character", data[0].dataValues);
+  //     });
+  // });
 
   // Route for creating a new character
   app.post("/api/characters", (req, res) => {
-    db.RpgCharacter.create(req.body)
+    let newCharacter = req.body;
+    Object.keys(newCharacter).forEach((stat) => {
+      if (newCharacter[stat] === undefined || newCharacter[stat] === "") {
+        newCharacter[stat] = null;
+      }
+    });
+    db.RpgCharacter.create(newCharacter)
       .then((dbCharacter) => {
         res.json(dbCharacter);
       });
