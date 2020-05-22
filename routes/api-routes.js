@@ -85,4 +85,14 @@ module.exports = function (app) {
   })
 };
 
+//Route for Navbar links
+//Home page
+  app.get("/api/user_data", function (req, res) {
+
+//About page
+    
+//Calendar page
+  
+//
+
 
