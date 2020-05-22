@@ -1,5 +1,24 @@
 // Gets the user ID from the query string
-let userID = window.location.search.split("=")[1];
+let userID;
+let charID;
+
+$(document).ready(function () {
+    const query = window.location.search.split("=")[1]
+    const firstQueryLetter = window.location.search[1];
+    console.log(firstQueryLetter);
+    if (firstQueryLetter === "c") {
+        charID = query;
+        console.log("charID:" + charID)
+        $.get("/api/" + charID)
+        .then((data) => console.log(data));
+    } else {
+        userID = query;
+        console.log("userID:" + userID);
+    }
+});
+// const userID = window.location.search.split("=")[1];
+const deleteCharacterButton = $("#delete_character_button");
+const updateCharacterButton = $("#update_character_button")
 
 // Route to post a new character
 $("#new-character-submit").on("click", createNewCharacter);
@@ -7,6 +26,38 @@ $("#new-character-submit").on("click", createNewCharacter);
 // Create New Character and View Character buttons
 $("#create-new-character").on("click", () => window.location.href = `/create-character?user_id=${userID}`);
 $("#view-character").on("click", () => window.location.href = `/view-character?user_id=${userID}`);
+
+//Route to generate a random number from the d20 dice click 
+$("#d20").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 20) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d12").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 12) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d10").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 10) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d8").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 8) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d6").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 6) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d4").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 4) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
 
 // // Function to create and post a new character
 function createNewCharacter(event) {
@@ -76,11 +127,15 @@ function createNewCharacter(event) {
             newCharacter[stat] = 0;
         }
     });
-
+    // Post new character then redirect to members page
     console.log(newCharacter);
     $.post("/api/characters", newCharacter)
-        .then(function (data) {
-            console.log(newCharacter);
-            console.log(data);
+        .then(() => {
+            window.location.href = "/members";
         });
 };
+
+// Delete button listener
+// deleteCharacterButton.on("click", () )
+
+// Update button listener
