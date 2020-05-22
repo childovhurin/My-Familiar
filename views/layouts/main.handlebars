@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+	<link rel="stylesheet" href="../assets/stylesheets/style.css" type="text/css" />
 	<title>Quotes App</title>
 </head>
 
@@ -37,8 +37,15 @@
 				</span>
 			</div>
 		</nav>
-		<button type="button" id="create-new-character" class="btn btn-dark">Create New Character</button>
-		<button type="button" id="view-character" class="btn btn-dark">View Saved Characters</button>
+		{{!-- <img class="img" id="d20" src="../../assets/images/d20.png" hover="D20" alt="d20 button"> --}}
+		{{!-- <img class="img" id="dice" src="../../assets/images/die.jpg" hover="Dice" alt="roll buttons"> --}}
+		<img src="../../assets/images/die.jpg" alt="roll buttons" usemap="#dice" width="125" height="200">
+		<map name="dice" id="allDice">
+			{{!-- <area shape="rect" coords="34,44,270,350" id="d8" alt="d8">
+			<area shape="circle" coords="337,300,44" id="d10" alt="d10"> --}}
+			<area shape="circle" coords="337,300,44"id="d20"  alt="d20">
+		</map>
+		<div id="rolled"> You rolled a: <span id="rolled-result"></span></div>
 	</div>
 	{{{ body }}}
 	<script src="https://code.jquery.com/jquery.js"></script>
