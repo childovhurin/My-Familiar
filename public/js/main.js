@@ -28,9 +28,34 @@ $("#create-new-character").on("click", () => window.location.href = `/create-cha
 $("#view-character").on("click", () => window.location.href = `/view-character?user_id=${userID}`);
 
 //Route to generate a random number from the d20 dice click 
-$("#allDice").on("click", () => { 
+$("#d20").on("click", () => { 
     console.log("click");
     const roll = Math.floor((Math.random() * 20) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d12").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 12) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d10").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 10) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d8").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 8) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d6").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 6) + 1);
+    $("#rolled-result").html(`${roll}`)
+  });
+  $("#d4").on("click", () => { 
+    console.log("click");
+    const roll = Math.floor((Math.random() * 4) + 1);
     $("#rolled-result").html(`${roll}`)
   });
 
