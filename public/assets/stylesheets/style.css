@@ -1,0 +1,14 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+.character-card {
+  border: 2px solid black;
+}
+
+#d20 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
