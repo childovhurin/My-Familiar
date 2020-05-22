@@ -114,4 +114,6 @@ module.exports = function (app) {
         res.json(allCharacters);
       })
   })
+
 };
+
