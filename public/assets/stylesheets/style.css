@@ -204,7 +204,7 @@ form.login {
   border: 2px solid black;
 }
 
-#d20 {
+.img-dice {
   height: 50px;
   width: 50px;
   border-radius: 50%;
