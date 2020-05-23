@@ -44,3 +44,9 @@ form.login {
   border-style: groove;
   border-radius: 20px;
 }
+
+.img-dice {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
