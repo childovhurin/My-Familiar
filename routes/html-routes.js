@@ -47,4 +47,9 @@ module.exports = function(app) {
   app.get("/about", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/about.html"));
   });
+
+  //Route for Calendar
+  app.get("/calendar", function(req, res) {
+    res.sendFile(path.join(__dirname, "../calender/MyFirstSchedule.html"));
+  });
 };
