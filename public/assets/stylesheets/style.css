@@ -17,6 +17,55 @@ body {
   background-color: #2c3531;
 }
 
+/*from old css stylesheet*/
+#chat-area {
+  height: 300px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.message-text {
+  background-color: lightblue;
+  /* margin: 2px; */
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 5px;
+}
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+.character-card {
+  border: 2px solid black;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+}
+.Charactername {
+  border-style: groove;
+  border-radius: 20px;
+}
+.characterinfo {
+  border-style: groove;
+  border-radius: 20px;
+}
+.base1 {
+  border-style: groove;
+  border-radius: 20px;
+}
+.skillscont {
+  border-style: groove;
+  border-radius: 20px;
+}
+.skills {
+  border-style: groove;
+  border-radius: 20px;
+}
+/*end old style sheet*/
+
 .charactername {
   color: #d9b08c;
 
