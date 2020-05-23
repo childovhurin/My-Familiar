@@ -88,12 +88,11 @@ function createNewCharacter(event) {
         UserId: userID
     };
 
-    // MySQL won't allow undefined or empty strings.  This code
-    //changes any undefined value or empty string to null
     // Post new character then redirect to members page
     console.log(newCharacter);
     $.post("/api/characters", newCharacter)
         .then(() => {
+            alert("Character created successfully!")
             window.location.href = "/members";
         });
 };
@@ -112,7 +111,9 @@ const deleteCharacter = function (id) {
 };
 
 // Delete button listener
-deleteCharacterButton.on("click", () => {
+deleteCharacterButton.on("click", (event) => {
+    event.preventDefault();
+    console.log("HERE IS THE CHAR ID: ", charID)
     deleteCharacter(charID);
 });
 
@@ -177,7 +178,6 @@ function updateCharacter(event) {
     };
 
     // Post new character then redirect to members page
-    console.log(updatedCharacter);
     function updateRequest(id, character) {
         return $.ajax({
             url: "/api/characters/update/" + id,

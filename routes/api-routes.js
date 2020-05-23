@@ -53,7 +53,6 @@ module.exports = function (app) {
 
   // Route for loading character to view-character.handlebars
   app.get("/view-character", (req, res) => {
-    console.log("params: " + req.params.charID)
     db.RpgCharacter.findAll({
       where: {
         id: req.query.charid
@@ -98,6 +97,7 @@ module.exports = function (app) {
 
   // Route for deleting characters
   app.delete("/api/characters/:charid", (req, res) => {
+    console.log("REQ PARAMS: ", req.params)
     db.RpgCharacter.destroy({
       where: {
         id: req.params.charid
