@@ -53,7 +53,6 @@ module.exports = function (app) {
 
   // Route for loading character to view-character.handlebars
   app.get("/view-character", (req, res) => {
-    console.log("params: " + req.params.charID)
     db.RpgCharacter.findAll({
       where: {
         id: req.query.charid
@@ -70,28 +69,15 @@ module.exports = function (app) {
       });
   });
 
-    // // Route for loading character to view-character.handlebars
-    // app.get("/api/characters/:charID", (req, res) => {
-    //   console.log("params: " + req.params.charID)
-    //   db.RpgCharacter.findAll({
-    //     where: {
-    //       id: req.params.charID
-    //     }
-    //   })
-    //     .then((data) => {
-    //       // let characterData = JSON.stringify(data);
-    //       // let parsedData = data[0];
-    //       console.log("this is the character Data: ", data[0].dataValues);
-    //       // const someObject = {
-    //       //   test: "this is a test"
-    //       // }
-    //       res.render("view-character", data[0].dataValues);
-    //     });
-    // });
-
   // Route for creating a new character
   app.post("/api/characters", (req, res) => {
-    db.RpgCharacter.create(req.body)
+    let newCharacter = req.body;
+    Object.keys(newCharacter).forEach((stat) => {
+      if (newCharacter[stat] === undefined || newCharacter[stat] === "") {
+        newCharacter[stat] = null;
+      }
+    });
+    db.RpgCharacter.create(newCharacter)
       .then((dbCharacter) => {
         res.json(dbCharacter);
       });
@@ -106,8 +92,92 @@ module.exports = function (app) {
     })
       .then((allCharacters) => {
         res.json(allCharacters);
-      })
-  })
+      });
+  });
 
+  // Route for deleting characters
+  app.delete("/api/characters/:charid", (req, res) => {
+    console.log("REQ PARAMS: ", req.params)
+    db.RpgCharacter.destroy({
+      where: {
+        id: req.params.charid
+      }
+    })
+      .then((result) => {
+        res.json(result)
+      });
+  });
+
+  // Route for updating characters
+  app.put("/api/characters/update/:charid", (req, res) => {
+    let updatedCharacter = req.body;
+    Object.keys(updatedCharacter).forEach((stat) => {
+      if (updatedCharacter[stat] === undefined || updatedCharacter[stat] === "") {
+        updatedCharacter[stat] = null;
+      };
+    });
+    db.RpgCharacter.update({
+      characterName: updatedCharacter.characterName,
+      class: updatedCharacter.class,
+      level: updatedCharacter.level,
+      race: updatedCharacter.race,
+      alignment: updatedCharacter.alignment,
+      experiencePoints: updatedCharacter.experiencePoints,
+      strength: updatedCharacter.strength,
+      dexterity: updatedCharacter.dexterity,
+      constitution: updatedCharacter.constitution,
+      intelligence: updatedCharacter.itelligence,
+      wisdom: updatedCharacter.wisdom,
+      charisma: updatedCharacter.charisma,
+      currentHitPoints: updatedCharacter.currentHitPoints,
+      armorClass: updatedCharacter.armorClass,
+      initiative: updatedCharacter.initiative,
+      speed: updatedCharacter.speed,
+      hitDie: updatedCharacter.hitDie,
+      languages: updatedCharacter.languages,
+      acrobatics: updatedCharacter.acrobatics,
+      animalHandling: updatedCharacter.animalHandling,
+      arcana: updatedCharacter.arcana,
+      athletics: updatedCharacter.athletics,
+      deception: updatedCharacter.deception,
+      history: updatedCharacter.history,
+      insight: updatedCharacter.insight,
+      intimidation: updatedCharacter.intimidation,
+      investigation: updatedCharacter.investigation,
+      medicine: updatedCharacter.medicine,
+      nature: updatedCharacter.nature,
+      perception: updatedCharacter.perception,
+      performance: updatedCharacter.performance,
+      persuasion: updatedCharacter.persuasion,
+      religion: updatedCharacter.religion,
+      sleightOfHand: updatedCharacter.sleightOfHand,
+      stealth: updatedCharacter.stealth,
+      survival: updatedCharacter.survival,
+      personalityTraits: updatedCharacter.personalityTraits,
+      ideals: updatedCharacter.ideals,
+      bonds: updatedCharacter.bonds,
+      flaws: updatedCharacter.flaws,
+      featuresAndTraits: updatedCharacter.featuresAndTraits,
+      weapon: updatedCharacter.weapon,
+      attackBonus: updatedCharacter.attackBonus,
+      damage: updatedCharacter.damage,
+      damageType: updatedCharacter.damageType,
+      spellName: updatedCharacter.spellName,
+      spellID: updatedCharacter.spellID,
+      spellType: updatedCharacter.spellType,
+      spellLevel: updatedCharacter.spellLevel,
+      castingTime: updatedCharacter.castingTime,
+      spellRange: updatedCharacter.spellRange,
+      spellComponents: updatedCharacter.spellComponents,
+      spellDuration: updatedCharacter.spellDuration
+    }, {
+      where: {
+        id: req.params.charid
+      }
+    })
+      .then((result) => {
+        res.json(result);
+      });
+  });
 };
 

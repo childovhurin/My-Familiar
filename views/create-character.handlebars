@@ -135,25 +135,25 @@
     <div class="PersonalityTraits col-md-2">
       <div class="personality_traits">
         <label for="personality_traits">Personality Traits</label>
-        <textarea name="personality_traits" value="{{personality_traits}}"></textarea>
+        <input type="text" name="personality_traits" id="personality_traits" value="{{personality_traits}}"/>
       </div>
     </div>
     <div class="Ideals col-md-2">
       <div class="ideals">
         <label for="ideals">Ideals</label>
-        <textarea name="ideals" value="{{ideals}}"></textarea>
+        <input name="ideals" id="ideals" value="{{ideals}}"/>
       </div>
     </div>  
     <div class="Bonds col-md-2">
       <div class="bonds">
         <label for="bonds">Bonds</label>
-        <textarea name="bonds" value="{{bonds}}"></textarea>
+        <input name="bonds" id="bonds" value="{{bonds}}"/>
       </div>
     </div>
     <div class="Flaws col-md-2">
     <div class="flaws">
       <label for="flaws">Flaws</label>
-      <textarea name="flaws" value="{{flaws}}"></textarea>
+      <input name="flaws" id="flaws" value="{{flaws}}"/>
     </div>
     </div>
   </div>  
@@ -164,15 +164,15 @@
     </div>
     <div class="attackBonus col-md-2">
       <label for="attack_bonus">Attack Bonus</label>
-      <input name="attack_bonus" placeholder="+0" value="{{attack_bonus}}"/>
+      <input name="attack_bonus" placeholder="+0" id="attack_bonus" value="{{attack_bonus}}"/>
     </div>
     <div class="damage col-md-2">
       <label for="damage">Damage</label>
-      <input name="damage" placeholder="+0" value="{{damage}}"/>
+      <input name="damage" placeholder="+0" id="damage" value="{{damage}}"/>
     </div>
     <div class="damageType col-md-2">
       <label for="damage_type">Damage Type</label>
-      <input name="damage_type" placeholder="+0" value="{{damage_type}}"/>
+      <input name="damage_type" placeholder="+0" id="damage_type" value="{{damage_type}}"/>
     </div>
 </div>
 <!-- SPELLS -->
@@ -180,7 +180,7 @@
     <div class="spellName col-md-2">
       <div class="spells">
         <label for="spell_name">Spell Name</label>
-        <textarea name="spell_name" value="{{spell_name}}"></textarea>
+        <input name="spell_name" id="spell_name" value="{{spell_name}}"/>
         </div>
     </div>
     <div class="spellID col-md-2">
@@ -189,37 +189,41 @@
     </div>
     <div class="spellType col-md-2"> <div class="spell_type">
       <label for="spell_type">Spell Type</label>
-      <textarea name="spell_type" value="{{spell_type}}"></textarea>
+      <input name="spell_type" id="spell_type" value="{{spell_type}}"/>
       </div></div> 
     <div class="spell_level col-md-2"> 
       <div class="spell_level">
         <label for="spell_level">Spell Level</label>
-        <input name="spell_level" placeholder="+0" value="{{spell_level}}"/>
+        <input name="spell_level" placeholder="+0" id="spell_level" value="{{spell_level}}"/>
         </div>
     </div>     
     <div class="castingTime col-md-2">
       <div class="casting_time">
         <label for="casting_time">Casting Time</label>
-        <input name="casting_time" placeholder="+0" value="{{casting_time}}"/>
+        <input name="casting_time" placeholder="+0" id="casting_time" value="{{casting_time}}"/>
         </div>
     </div>
     <div class="range col-md-2">
       <div class="spell_range">
         <label for="spell_range">Spell Range</label>
-        <textarea name="spell_range" value="{{spell_range}}"></textarea>
+        <input name="spell_range" id="spell_range" value="{{spell_range}}"/>
         </div>
     </div>
     <div class="components col-md-2">
       <div class="spell_components">
         <label for="spell_components">Spell Components</label>
-        <textarea name="spell_components" value="{{spell_components}}"></textarea>
+        <input name="spell_components" id="spell_components" value="{{spell_components}}"/>
       </div>
     </div>
     <div class="spDuration col-md-2">
       <div class="spell_duration">
       <label for="spell_duration">Spell Duration</label>
-      <textarea name="spell_duration" value="{{spell_duration}}"></textarea>
+      <input name="spell_duration" id="spell_duration" value="{{spell_duration}}"/>
     </div>
   </div>
+</div>
+<div class="row submit-row">
+<button type="button" class="btn btn-secondary btn-lg" id="new-character-submit">Create This Character</button>
+
 </div>
 </div>

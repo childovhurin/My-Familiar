@@ -4,9 +4,8 @@ var path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function (app) {
-
-  app.get("/", function (req, res) {
+module.exports = function(app) {
+  app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
@@ -14,7 +13,7 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
-  app.get("/login", function (req, res) {
+  app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
@@ -24,13 +23,12 @@ module.exports = function (app) {
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, function (req, res) {
+  app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
   // Route for create-character.handlebars
-  app.get("/create-character", (req, res) => {
-   
+  app.get("/create-character", function(req, res) {
     res.render("create-character");
   });
 
@@ -41,7 +39,12 @@ module.exports = function (app) {
   // });
 
   // Route for chat
-  app.get("/chat", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/chat.html"))
+  app.get("/chat", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/chat.html"));
+  });
+
+  //Route for About
+  app.get("/about", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 };

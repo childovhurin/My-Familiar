@@ -1,13 +1,13 @@
-form.signup,
+/* form.signup,
 form.login {
   margin-top: 50px;
 }
 
 .character-card {
   border: 2px solid black;
-}
+} */
 
-#chat-area {
+/* #chat-area {
   height: 300px;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
@@ -16,12 +16,12 @@ form.login {
 .message-text {
   background-color: lightblue;
   /* margin: 2px; */
-  padding-left: 2px;
+  /*padding-left: 2px;
   padding-right: 2px;
   border-radius: 5px;
-}
+} */
 
-.container {
+/* .container {
   background-color: rgb(255, 255, 255);
 }
 .Charactername {
