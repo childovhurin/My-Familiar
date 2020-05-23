@@ -57,11 +57,13 @@ form.login {
   border-style: groove;
   border-radius: 20px;
 }
-.skillscont {
+/* .skillscont {
   border-style: groove;
   border-radius: 20px;
-}
-.skills {
+} */
+.skills,
+.skillscont
+{
   border-style: groove;
   border-radius: 20px;
 }
