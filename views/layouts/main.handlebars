@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
-	<title>Quotes App</title>
+	<link rel="stylesheet" href="../assets/stylesheets/style.css" type="text/css" />
+	<title>My Familiar</title>
 </head>
 
 <body>
@@ -23,10 +23,10 @@
 						<a class="nav-link" href="/members">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/public/calendar.html">Calendar</a>
+						<a class="nav-link" href="/calendar">Calendar</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/public/about.html">About</a>
+						<a class="nav-link" href="/about">About</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/chat">Chat</a>
@@ -37,13 +37,18 @@
 				</span>
 			</div>
 		</nav>
-		{{!-- <button type="button" id="create-new-character" class="btn btn-dark">Create New Character</button>
-		<button type="button" id="view-character" class="btn btn-dark">View Saved Characters</button> --}}
+		<img class="img" id="d20" src="../../assets/images/d20.png" hover="D20" alt="d20 button">
+		<img class="img" id="d12" src="../../assets/images/d12.png" hover="D12" alt="d12 button">
+		<img class="img" id="d10" src="../../assets/images/d10.png" hover="D10" alt="d10 button">
+		<img class="img" id="d8" src="../../assets/images/d8.png" hover="D8" alt="d8 button">
+		<img class="img" id="d6" src="../../assets/images/d6.png" hover="D6" alt="d6 button">
+		<img class="img" id="d4" src="../../assets/images/d4.png" hover="D4" alt="d4 button">
+		<div id="rolled"> You rolled a: <span id="rolled-result"></span></div>
 	</div>
 	{{{ body }}}
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/main.js"></script>
-  <script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 		crossorigin="anonymous"></script>
