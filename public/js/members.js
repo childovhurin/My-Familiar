@@ -25,7 +25,7 @@ $(document).ready(function () {
               let characterCard = $("<div>");
               characterCard.addClass("character-card");
               characterCard.attr("data-charid", data[datum].id)
-              characterCard.html(`${data[datum].id} <b>${data[datum].characterName}<b>
+              characterCard.html(`${data[datum].id} ${data[datum].characterName}
             Class: ${data[datum].class} Level: ${data[datum].level} Race: ${data[datum].race}`);
               $("#view-character-div").append(characterCard);
             });
