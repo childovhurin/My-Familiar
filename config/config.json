@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": null,
     "database": "rpgDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
