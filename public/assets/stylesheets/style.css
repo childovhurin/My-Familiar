@@ -1,3 +1,151 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: rgb(44,53,49);
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.navbar {
+  background-color: #2c3531;
+}
+
+.charactername {
+  color: #d9b08c;
+
+}
+
+.characterinfo {
+  color: #d9b08c;
+}
+
+.base1 {
+  color: #d9b08c;
+}
+
+.skillscont {
+  color: #d9b08c;
+
+}
+
+.skills {
+  color: #d9b08c;
+}
+
+.skill {
+  color: #d9b08c;
+}
+
+.personalityTraits {
+  color: #d9b08c;
+}
+
+.ideals {
+  color: #d9b08c;
+}
+
+.bonds {
+  color: #d9b08c;
+}
+
+.flaws {
+  color: #d9b08c;
+}
+
+.weapon {
+  color: #d9b08c;
+}
+
+.attackBonus {
+  color: #d9b08c;
+}
+
+.damage {
+  color: #d9b08c;
+}
+
+.damageType {
+  color: #d9b08c;
+}
+
+.spells {
+  color: #d9b08c;
+}
+
+/* .parallax-wrapper {
+  width: 100vw;
+  height: 100vw;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+} 
+
+ .parallax-wrapper::before {
+   content: "";
+   width: 100vw;
+   height: 100vw;
+   top: 0;
+   left: 0;
+   background-image: url("/public/stylesheets/images/castle.jpg");
+   position: absolute;
+   z-index: -1;
+   transform: translateZ(-1px) scale(2);
+ }
+
+.regular-wrapper {
+  width: 100vw;
+  height: 100vw;
+  padding-top: 20vh; 
+}
+
+.parallax {
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+} */
+
+p, 
+a, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5,
+h6 {
+  color: #d9b08c;
+
+}
+
+a:hover {
+  color: #ffcb9a;
+}
+
+
+.button {
+  background-color: #d9b08c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.login {
+  -moz-box: inset 0 0 10 px #777777;
+  -webkit-box: inset 0 0 10 px #777777;
+  box-shadow: inset 0 0 10 px #777777;
+}
+
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -11,4 +159,13 @@ form.login {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+.footer {
+  /* position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px; */
+  background-color: #2c3531;
 }

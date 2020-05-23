@@ -1,9 +1,52 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!--CSS Stylesheet-->
+  <link rel="stylesheet" href="./assets/stylesheets/style.css" type="text/css" />
+  <title>Create Your Character</title>
+</head>
+
+<body>
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="members.html">My Familiar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="members.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="calendar.html">Calendar</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="chat.html">Chat</a>
+              </li>
+          </ul>
+          <span class="navbar-text" id="userName">
+              Create Your Character
+          </span>
+      </div>
+  </nav>
+<br>
 <div class="container">
   <div class="row Header">
   <!-- Character Name -->
   <h4 class="text-center">Create Your New Character</h4>
-  </br></br>
-    <div class="Charactername col-md-3">
+  </div>
+    <div class="Charactername col-6">
       <label for="charname">Character Name:</label>
         <input type="text" id="charname" name="charname" value="{{character_name}}" />
     </div>
@@ -48,7 +91,7 @@
         </div>
     </div>
   <!-- BASE 2 -->
-    <div class="skillscont col-md-8">
+    <div class="skillscont col-md-4">
       <div class="row">
         <div class="col-md-6">
           <div class="score">
@@ -79,8 +122,9 @@
         </div>
     </div>  
   </div>
+</br>
   <!-- SKILLS -->
-  <h4 class="text-left">Skills:</h4>
+  <h4 class="text-left">Skills</h4>
   <div class="row"> 
     <div class="skills col-md-2">
       <label for="acrobatics">Acrobatics <span class="skill">(Dex)</span></label>
@@ -92,7 +136,7 @@
       <label for="athletics">Athletics <span class="skill">(Str)</span></label>
       <input type="text" id="athletics" name="athletics" placeholder="+0" value="{{athletics}}" />
     </div> 
-    <div class="4-8 col-md-2">
+    <div class="skills 4-8 col-md-2">
       <label for="deception">Deception <span class="skill">(Cha)</span></label>
       <input type="text" id="deception" name="deception" placeholder="+0" value="{{deception}}" />
       <label for="history">History <span class="skill">(Int)</span></label>
@@ -102,7 +146,7 @@
       <label for="intimidation">Intimidation <span class="skill">(Cha)</span></label>
       <input type="text" id="intimidation" name="intimidation" placeholder="+0" value="{{intimidation}}" />
     </div>
-    <div class="9-13 col-md-2">
+    <div class="skills 9-13 col-md-2">
       <label for="investigation">Investigation <span class="skill">(Int)</span></label>
       <input type="text" id="investigation" name="investigation" placeholder="+0" value="{{investigation}}" />        
       <label for="medicine">Medicine <span class="skill">(Wis)</span></label>
@@ -112,7 +156,7 @@
       <label for="perception">Perception <span class="skill">(Wis)</span></label>
       <input type="text" id="perception" name="perception" placeholder="+0" value="{{perception}}" />
     </div>
-    <div class="14-17 col-md-2">
+    <div class="skills 14-17 col-md-2">
       <label for="performance">Performance <span class="skill">(Cha)</span></label>
       <input type="text" id="performance" name="performance" placeholder="+0" value="{{performance}}" />
       <label for="persuasion">Persuasion <span class="skill">(Cha)</span></label>
@@ -122,7 +166,7 @@
       <label for="sleight_of_hand">Sleight of Hand <span class="skill">(Dex)</span></label>
       <input type="text" id="sleight_of_hand" name="sleight_of_hand" placeholder="+0" value="{{sleight_of_hand}}" />
     </div>
-    <div class="18-19 col-md-2">
+    <div class="skills 18-19 col-md-2">
       <label for="stealth">Stealth <span class="skill">(Dex)</span></label>
       <input type="text" id="stealth" name="stealth" placeholder="+0" value="{{stealth}}" />
       <label for="survival">Survival <span class="skill">(Wis)</span></label>
@@ -134,8 +178,8 @@
   <div class="row CharacterDetails">
     <div class="PersonalityTraits col-md-2">
       <div class="personality_traits">
-        <label for="personality_traits">Personality Traits</label>
-        <textarea name="personality_traits" value="{{personality_traits}}"></textarea>
+        <h4 label for="personality_traits">Personality Traits</h4></label>
+        <!-- <textarea name="personality_traits" value="{{personality_traits}}"></textarea> -->
       </div>
     </div>
     <div class="Ideals col-md-2">
@@ -157,9 +201,11 @@
     </div>
     </div>
   </div>  
+  <br>
   <div class="row attacks">
     <div class="weapon col-md-2">
-      <label for="weapon">Weapon</label>
+    <!--WEAPONS-->
+      <h4 label for="weapon">Weapons</h4></label>
       <input type="text" id="weapon" name="weapon" placeholder="10" value="{{weapon}}"/>
     </div>
     <div class="attackBonus col-md-2">
@@ -175,10 +221,12 @@
       <input name="damage_type" placeholder="+0" value="{{damage_type}}"/>
     </div>
 </div>
+<br>
 <!-- SPELLS -->
 <div class="row spells">
     <div class="spellName col-md-2">
       <div class="spells">
+        <h4 class="text-left">Spells</h4>
         <label for="spell_name">Spell Name</label>
         <textarea name="spell_name" value="{{spell_name}}"></textarea>
         </div>
@@ -223,3 +271,4 @@
   </div>
 </div>
 </div>
+
