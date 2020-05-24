@@ -21,6 +21,12 @@ $(document).ready(function () {
         $.get("/api/" + data.id)
           .then((data) => {
             Object.keys(data).forEach((datum) => {
+              // Get the correct character for icon depending on race
+              let characterIcon;
+              if(data[datum].race.toLowerCase() === "elf") {
+                characterIcon = $("<img src='assets/images/elf_transparent.png'/>")
+              };
+              console.log("THIS IS THE RACE: ", data[datum].race);
               // Create a small card for each character
               let characterCard = $("<div>");
               characterCard.addClass("character-card");
@@ -28,6 +34,7 @@ $(document).ready(function () {
               characterCard.html(`${data[datum].id} ${data[datum].characterName}
             Class: ${data[datum].class} Level: ${data[datum].level} Race: ${data[datum].race}`);
               $("#view-character-div").append(characterCard);
+              characterCard.append(characterIcon);
             });
 
             // Routes to view-character page
