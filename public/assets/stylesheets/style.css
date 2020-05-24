@@ -11,6 +11,7 @@ body {
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: auto;
+  font-family: 'Kelly Slab', cursive;
 }
 
 .navbar {
