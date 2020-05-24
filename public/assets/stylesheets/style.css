@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  background: rgb(44,53,49);
+  /* background: rgb(44,53,49); */
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
   height: 100vh;
   perspective: 1px;
@@ -41,9 +41,7 @@ form.login {
   border: 2px solid black;
 }
 
-.container {
-  background-color: rgb(255, 255, 255);
-}
+
 .Charactername {
   border-style: groove;
   border-radius: 20px;
@@ -144,7 +142,7 @@ form.login {
    height: 100vw;
    top: 0;
    left: 0;
-   background-image: url("/public/stylesheets/images/castle.jpg");
+   background-image: url("");
    position: absolute;
    z-index: -1;
    transform: translateZ(-1px) scale(2);
