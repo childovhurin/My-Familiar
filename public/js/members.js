@@ -25,8 +25,10 @@ $(document).ready(function () {
               let characterIcon;
               if(data[datum].race.toLowerCase() === "elf") {
                 characterIcon = $("<img src='assets/images/elf_transparent.png'/>")
+                characterIcon.addClass("character-icon");
               };
-              console.log("THIS IS THE RACE: ", data[datum].race);
+              
+              
               // Create a small card for each character
               let characterCard = $("<div>");
               characterCard.addClass("character-card");
@@ -34,20 +36,12 @@ $(document).ready(function () {
               characterCard.html(`${data[datum].id} ${data[datum].characterName}
             Class: ${data[datum].class} Level: ${data[datum].level} Race: ${data[datum].race}`);
               $("#view-character-div").append(characterCard);
-              characterCard.append(characterIcon);
+              characterCard.prepend(characterIcon);
             });
 
             // Routes to view-character page
             $(".character-card").on("click", (e) => {
-              // $.get("/api/characters/" + $(e.target).attr("data-charid"))
-              // .then(() => {
-              //   console.log(JSON.stringify(data));
                 window.location.href = "/view-character?charid=" + $(e.target).attr("data-charid");
-              // .then(() => window.location.href = "/view-character/" + $(e.target).attr("data-charid"));
-              // .then(() => window.location.href = "/view-character");
-              // console.log($(e.target).attr("data-charid"))
-              // .then(() => window.location.href = "/view-character?char_id=" + $(e.target).attr("data-charid"));
-            // });
           });
       });
   });

@@ -160,6 +160,19 @@ form.login {
   padding: 50px;
   width: 50%;
 } */
+.parallax {
+  /* The image used */
+  background-image: url("/assets/images/castle.png");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 p, 
 a, 
@@ -222,4 +235,9 @@ font-size: 20px;
   height: 60px;
   line-height: 60px; */
   background-color: #2c3531;
+}
+
+.character-icon {
+  height: 50px;
+  width: 50px;
 }
