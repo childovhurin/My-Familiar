@@ -5,8 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../assets/stylesheets/style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Jura&family=Kelly+Slab&display=swap" rel="stylesheet">	<link rel="stylesheet" href="../assets/stylesheets/style.css" type="text/css" />
 	<title>My Familiar</title>
 </head>
 
@@ -38,18 +37,25 @@
 				</span>
 			</div>
 		</nav>
-		<img class="img-dice" id="d20" src="../../assets/images/d20.png" title="D20" alt="d20 button">
-		<img class="img-dice" id="d12" src="../../assets/images/d12.png" title="D12" alt="d12 button">
-		<img class="img-dice" id="d10" src="../../assets/images/d10.png" title="D10" alt="d10 button">
-		<img class="img-dice" id="d8" src="../../assets/images/d8.png" title="D8" alt="d8 button">
-		<img class="img-dice" id="d6" src="../../assets/images/d6.png" title="D6" alt="d6 button">
-		<img class="img-dice" id="d4" src="../../assets/images/d4.png" title="D4" alt="d4 button">
-		<div id="rolled"> You rolled a: <span id="rolled-result"></span></div>
+	</div>
+	<div class="container p-3">
+		<div class="row p-1 m-1 align-middle rounded-pill border border-dark" id="diceDiv">
+			<div class="col">
+				<img class="img-dice" id="d20" src="../../assets/images/d20.png" title="D20" alt="d20 button">
+				<img class="img-dice" id="d12" src="../../assets/images/d12.png" title="D12" alt="d12 button">
+				<img class="img-dice" id="d10" src="../../assets/images/d10.png" title="D10" alt="d10 button">
+				<img class="img-dice" id="d8" src="../../assets/images/d8.png" title="D8" alt="d8 button">
+				<img class="img-dice" id="d6" src="../../assets/images/d6.png" title="D6" alt="d6 button">
+				<img class="img-dice" id="d4" src="../../assets/images/d4.png" title="D4" alt="d4 button">
+			</div>
+			<div class="col-6 text-left p-2">
+				<h4 id="rolled"> You rolled a: <span id="rolled-result"></span></h4>
+			</div>
+		</div>
 	</div>
 	{{{ body }}}
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/main.js"></script>
-	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 		crossorigin="anonymous"></script>
