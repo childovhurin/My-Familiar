@@ -1,18 +1,86 @@
 body {
-  margin: 0;
-  /* background: rgb(44,53,49); */
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   perspective: 1px;
+  margin: 0;
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: auto;
   font-family: 'Kelly Slab', cursive;
 }
 
+#navbar {
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+}
+
+#about {
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  padding: 5px;
+  
+}
+
+#dev {
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  padding: 5px;
+  
+}
+
 img {
   opacity: 0.5;
+  border-style: groove;
+  border-radius: 20px;
 
+}
+
+.parallaxabout {
+  background-image: url("public/assets/images/castle.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxchat {
+  background-image: url("/public/assets/images/whbattle.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxlogin {
+  background-image: url("/public/assets/images/loginbg.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxmembers {
+  background-image: url("/public/assets/images/createchar.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxsignup {
+  background-image: url("/public/assets/images/battle.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  padding: 5px;
 }
 
 /*from old css stylesheet*/
@@ -39,14 +107,25 @@ form.login {
   border: 2px solid black;
 }
 
-.Charactername {
+.charactername {
   border-style: groove;
   border-radius: 20px;
+  padding: 5px;
 }
 .characterinfo {
   border-style: groove;
   border-radius: 20px;
+  padding: 5px;
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  
 }
+
+.charinfo {
+  color: #d9b08c;
+}
+
 .base1 {
   border-style: groove;
   border-radius: 20px;
@@ -56,6 +135,7 @@ form.login {
   color: #d9b08c;
   border-style: groove;
   border-radius: 20px;
+  padding: 5px;
 }
 /*end old style sheet*/
 
@@ -67,6 +147,7 @@ form.login {
   color: #d9b08c;
   border-style: groove;
   border-radius: 20px;
+  padding: 5px;
 }
 
 .attacks {
@@ -77,14 +158,6 @@ form.login {
 
 input {
   background-color: lightgray;
-}
-
-.characterinfo {
-  color: #d9b08c;
-}
-
-.base1 {
-  color: #d9b08c;
 }
 
 .score {
@@ -109,18 +182,6 @@ input {
   border-radius: 20px;
 }
 
-/* .ideals {
-  color: #d9b08c;
-}
-
-.bonds {
-  color: #d9b08c;
-}
-
-.flaws {
-  color: #d9b08c;
-} */
-
 .weapon {
   color: #d9b08c;
 }
@@ -138,42 +199,11 @@ input {
 }
 
 .spells {
+  position: relative;
   color: #d9b08c;
   border-style: groove;
   border-radius: 20px;
 }
-
-.parallax-wrapper {
-  width: 100vw;
-  height: 100vw;
-  padding-top: 20vh;
-  box-sizing: border-box;
-  transform-style: preserve-3d;
-} 
-
- .parallax-wrapper::before {
-   content: "";
-   width: 100vw;
-   height: 100vw;
-   top: 0;
-   left: 0;
-   background-image: url("");
-   position: absolute;
-   z-index: -1;
-   transform: translateZ(-1px) scale(2);
- }
-
-.regular-wrapper {
-  width: 100vw;
-  height: 100vw;
-  padding-top: 20vh; 
-}
-
-.parallax {
-  margin: 0 auto;
-  padding: 50px;
-  width: 50%;
-} 
 
 p, 
 a, 
