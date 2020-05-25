@@ -6,7 +6,10 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Jura&family=Kelly+Slab&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+
+
   <!--CSS Stylesheet-->
   <link rel="stylesheet" href="./assets/stylesheets/style.css" type="text/css" />
   <title>Create Your Character</title>
@@ -14,42 +17,123 @@
 
 <body>
   <!--NavBar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="members.html">My Familiar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="/members">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="calendar.html">Calendar</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="chat.html">Chat</a>
-              </li>
-          </ul>
-          <span class="navbar-text" id="userName">
-              Create Your Character
-          </span>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+    <a class="navbar-brand" href="members.html">My Familiar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/members">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="calendar.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="chat.html">Chat</a>
+        </li>
+      </ul>
+      <span class="navbar-text" id="userName">
+        Create Your Character
+      </span>
+    </div>
   </nav>
-<br>
-<div class="container">
-  <div class="row Header">
-  <!-- Character Name -->
-  <h4 class="text-center">Create Your New Character</h4>
-  </div>
+  <br>
+  <!--parallax-->
+  <div class="parallaxmembers"></div>
+  <div class="container">
+    <div class="row Header">
+      <!-- Character Name -->
+      <h4 class="text-center">Create Your New Character</h4>
+    </div>
     <div class="Charactername col-6">
       <label for="charname">Character Name:</label>
       <input type="text" id="charname" name="charname" value="{{character_name}}" />
     </div>
+
+    <br>
+    <!-- CHARACTER BASIC INFO -->
+    <h4 class="text-left">Basic Character Information</h4>
+    <div class="row charinfo">
+      <!-- BASE 1-->
+      <div class="base1 col-md-4">
+        <div class="row">
+          <label for="basestrength">Strength:</label>
+          <input type="text" id="basestrength" name="basestrength" placeholder="10" value="{{base_strength}}" />
+        </div>
+        <div class="row">
+          <label for="dexterity">Dexterity:</label>
+          <input type="text" id="dexterity" name="dexterity" placeholder="10" value="{{base_dex}}" />
+        </div>
+        <div class="row">
+          <label for="constitution">Constitution:</label>
+          <input type="text" id="constitution" name="constitution" placeholder="10" value="{{base_con}}" />
+        </div>
+        <div class="row">
+          <label for="intelligence">Intelligence:</label>
+          <input type="text" id="intelligence" name="intelligence" placeholder="10" value="{{base_int}}" />
+        </div>
+        <div class="row">
+          <label for="wisdom">Wisdom:</label>
+          <input type="text" id="wisdom" name="wisdom" placeholder="10" value="{{base_wisdom}}" />
+        </div>
+      </div>
+      <!-- BASE 2 -->
+      <div class="skillscont col-md-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="score">
+              <label for="current_hitpoints">Current Hit Points:</label>
+              <input type="text" id="current_hitpoints" name="current_hitpoints" placeholder="10"
+                value="{{current_hitpoints}}" />
+            </div>
+            <div class="score">
+              <label for="armor_class">Armor Class:</label>
+              <input type="text" id="armor_class" name="armor_class" placeholder="10" value="{{armor_class}}" />
+            </div>
+            <div class="score">
+              <label for="initiative">Initiative:</label>
+              <input type="text" id="initiative" name="initiative" placeholder="10" value="{{initiative}}" />
+            </div>
+            <div class="score">
+              <label for="base_speed">Speed:</label>
+              <input name="base_speed" value="{{base_speed}}" type="text" />
+            </div>
+            <div class="score">
+              <label for="hit_die">Hit Die:</label>
+              <input type="text" id="hit_die" name="hit_die" placeholder="10" value="{{hit_die}}" />
+            </div>
+            <div class="score">
+              <label for="languages">Languages:</label>
+              <input type="text" id="languages" name="languages" placeholder="10" value="{{languages}}" />
+            </div>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+      <div class="characterinfo col-md-4">
+        <li class="list-group-item"><label for="class">Class:</label>
+          <input type="text" id="class" name="class" value="{{character_class}}" /></li>
+        <li class="list-group-item"><label for="level">Level:</label>
+          <input type="text" id="level" name="level" value="{{character_level}}" /></li>
+        <li class="list-group-item"><label for="race">Race:</label>
+          <input type="text" id="race" name="race" value="{{character_race}}" /></li>
+        <li class="list-group-item"><label for="alignment">Alignment:</label>
+          <input type="text" id="alignment" name="alignment" value="{{character_alignment}}" /></li>
+        <li class="list-group-item"><label for="experiencepoints">Experience Points:</label>
+          <input type="text" id="expereiencepoints" name="experiencepoints" value="{{experience_points}}" /></li>
+      </div>
+    </div>
+    </br>
+
+    <!-- SKILLS -->
+    <h4 class="text-left">Skills</h4>
+    <br>
     <!-- CHARACTER BASIC INFO -->
     <div class="characterinfo col-md-4">
       <li class="list-group-item"><label for="class">Class:</label>
@@ -126,6 +210,7 @@
     </br>
     <!-- SKILLS -->
     <h4 class="text-left">Skills</h4>
+
     <div class="row">
       <div class="skills col-md-2">
         <label for="acrobatics">Acrobatics <span class="skill">(Dex)</span></label>
@@ -183,6 +268,9 @@
           <!-- <input name="personality_traits" value="{{personality_traits}}"></input> -->
         </div>
       </div>
+
+      <br>
+
       <div class="Ideals col-md-2">
         <div class="ideals">
           <label for="ideals">Ideals</label>
@@ -209,6 +297,9 @@
         <h4 label for="weapon">Weapons</h4></label>
         <input type="text" id="weapon" name="weapon" placeholder="10" value="{{weapon}}" />
       </div>
+
+      <br>
+
       <div class="attackBonus col-md-2">
         <label for="attack_bonus">Attack Bonus</label>
         <input name="attack_bonus" placeholder="+0" value="{{attack_bonus}}" />
@@ -223,7 +314,9 @@
       </div>
     </div>
     <br>
-    <!-- SPELLS -->
+
+  <!-- SPELLS -->
+
     <div class="row spells">
       <div class="spellName col-md-2">
         <div class="spells">
@@ -273,4 +366,33 @@
         </div>
       </div>
     </div>
+
   </div>
+
+  <br>
+  <!--FOOTER-->
+  <footer class="footer #2c3531">
+    <div class="container #2c3531">
+      <span class="text-muted #d1e8e2">
+        “The secret we should never let the gamemasters know is that they don't need
+        any rules.”
+        <p class="grey-text text-lighten-4">Gary Gygax</p>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="members.html">Home</a>
+          </li>
+          <li><a class="grey-text text-lighten-3" href="calendar.html">Calendar</a>
+          </li>
+          <li><a class="grey-text text-lighten-3" href="about.html">About Us</a>
+          </li>
+          <li><a class="grey-text text-lighten-3" href="chat.html">Chat</a></li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        My Familiar © 2020
+      </div>
+    </div>
+  </footer>
+</body>
