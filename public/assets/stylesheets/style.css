@@ -7,7 +7,7 @@ body {
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: 'Kelly Slab', cursive;
+  font-family: 'Jura';
 }
 
 #navbar {
@@ -26,12 +26,12 @@ body {
   
 }
 
-img {
+/* img {
   opacity: 0.5;
   border-style: groove;
   border-radius: 20px;
 
-}
+} */
 
 .parallaxabout {
   background-image: url("public/assets/images/castle.png");
@@ -51,15 +51,6 @@ img {
   background-size: cover;
 }
 
-.parallaxlogin {
-  background-image: url("/public/assets/images/loginbg.png");
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .parallaxmembers {
   background-image: url("/public/assets/images/createchar.png");
   height: 500px;
@@ -69,19 +60,11 @@ img {
   background-size: cover;
 }
 
-.parallaxsignup {
-  background-image: url("/public/assets/images/battle.png");
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.login {
+/* .login {
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
   padding: 5px;
-}
+} */
 
 /*from old css stylesheet*/
 #chat-area {
@@ -98,10 +81,10 @@ img {
   border-radius: 5px;
 }
 
-form.signup,
+/* form.signup,
 form.login {
   margin-top: 50px;
-}
+} */
 
 .character-card {
   border: 2px solid black;
@@ -245,20 +228,6 @@ a:hover {
   -moz-box: inset 0 0 10 px #777777;
   -webkit-box: inset 0 0 10 px #777777;
   box-shadow: inset 0 0 10 px #777777;
-}
-
-/* signup div */
-label{
-color: #d1e8e2;
-}
-
-#signup {
-  color: #777777;
-  background-color: #ffcb9a;
-}
-
-#form-container {
-margin-top: 13%;
 }
 
 /* Dice */
