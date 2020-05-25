@@ -4,14 +4,15 @@ $(document).ready(function () {
   $.get("/api/user_data").then((data) => {
     console.log(data);
     $(".member-name").text(data.email);
+    // Set the user id to local storage
+    localStorage.setItem("userID", data.id);
   });
 
   // click listener for the create-character button that redirects
   // to the /create-character page
   $("#create-character").on("click", () => {
-    $.get("/api/user_data").then((data) => {
-      window.location.href = `/create-character?user_id=${data.id}`
-    });
+    $.get("/api/user_data")
+      .then(() => window.location.href = "/create-character");
   });
 
   // Route to get all character names
@@ -23,7 +24,7 @@ $(document).ready(function () {
             Object.keys(data).forEach((datum) => {
               // Get the correct character for icon depending on race
               let characterIcon;
-              if(data[datum].race.toLowerCase() === "elf") {
+              if(data[datum].race !== null && data[datum].race.toLowerCase() === "elf") {
                 characterIcon = $("<img src='assets/images/elf_transparent.png'/>")
                 characterIcon.addClass("character-icon");
               };
@@ -41,7 +42,9 @@ $(document).ready(function () {
 
             // Routes to view-character page
             $(".character-card").on("click", (e) => {
+
                 window.location.href = "/view-character?charid=" + $(e.target).attr("data-charid");
+              
           });
       });
   });

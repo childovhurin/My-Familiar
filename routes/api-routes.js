@@ -59,12 +59,7 @@ module.exports = function (app) {
       }
     })
       .then((data) => {
-        // let characterData = JSON.stringify(data);
-        // let parsedData = data[0];
         console.log("this is the character Data: ", data[0].dataValues);
-        // const someObject = {
-        //   test: "this is a test"
-        // }
         res.render("view-character", data[0].dataValues);
       });
   });
@@ -95,8 +90,23 @@ module.exports = function (app) {
       });
   });
 
+  // Route for getting information for one character
+  app.get("/api/characters/:characterId", (req, res) => {
+    console.log("CHARACTER ID: ", req.params.characterId);
+    db.RpgCharacter.findAll({
+      where: {
+        id: req.params.characterId
+      }
+    })
+      .then((character) => {
+        console.log("THIS IS THE SINGLE CHARACTER DATA: ", character[0].dataValues);
+        res.json(character[0].dataValues);
+      });
+  });
+
+
   // Route for deleting characters
-  app.delete("/api/characters/:charid", (req, res) => {
+  app.delete("/api/characters/delete/:charid", (req, res) => {
     console.log("REQ PARAMS: ", req.params)
     db.RpgCharacter.destroy({
       where: {
