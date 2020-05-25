@@ -1,21 +1,41 @@
 // Gets the user ID from the query string
-let userID;
+let userID = localStorage.getItem("userID");
 let charID;
 
+
 $(document).ready(function () {
+    // Gets the charID from query string
     const query = window.location.search.split("=")[1]
     const firstQueryLetter = window.location.search[1];
-    console.log(firstQueryLetter);
     if (firstQueryLetter === "c") {
         charID = query;
-        console.log("charID:" + charID)
-        // $.get("/api/" + charID)
-        //     .then((data) => console.log(data));
-    } else {
-        userID = query;
-        console.log("userID:" + userID);
+        console.log("charID:" + charID);
     }
+    // Verifies that user is logged in
+    if(userID === null) {
+        alert("You must be logged in to view this page.")
+        window.location.replace("/")
+    // If user is logged in and a charID exists (i.e. user is on view-character page),
+    // a call is made to API to determine if character belongs to user
+    } else if(userID && charID) {
+        $.get("/api/characters/" + charID)
+        .then((data) => {
+            console.log("this is the returned data", data);
+        
+            // If character does not belong to user, user is redirected to members page
+            if(parseInt(userID) !== data.UserId){
+                window.location.replace("/members");
+                alert("You do not have permission to view this page.")
+            };
+        });
+    };
 });
+
+
+
+console.log("this is the real userID", userID)
+
+
 // const userID = window.location.search.split("=")[1];
 const deleteCharacterButton = $("#delete_character_button");
 const updateCharacterButton = $("#update_character_button")
@@ -24,8 +44,8 @@ const updateCharacterButton = $("#update_character_button")
 $("#new-character-submit").on("click", createNewCharacter);
 
 // Create New Character and View Character buttons
-$("#create-new-character").on("click", () => window.location.href = `/create-character?user_id=${userID}`);
-$("#view-character").on("click", () => window.location.href = `/view-character?user_id=${userID}`);
+// $("#create-new-character").on("click", () => window.location.href = `/create-character?user_id=${userID}`);
+// $("#view-character").on("click", () => window.location.href = `/view-character?user_id=${userID}`);
 
 
 //Route to generate a random number from the d20 dice click 
@@ -134,7 +154,7 @@ function createNewCharacter(event) {
 const deleteCharacter = function (id) {
     console.log("this is the delete character id: " + id);
     return $.ajax({
-        url: "/api/characters/" + id,
+        url: "/api/characters/delete/" + id,
         method: "DELETE"
     })
         .then(() => {
@@ -229,3 +249,4 @@ function updateCharacter(event) {
 updateCharacterButton.on("click", () => {
     updateCharacter(event);
 });
+

@@ -34,7 +34,7 @@ img {
 }
 
 .parallaxabout {
-  background-image: url("public/assets/images/castle.png");
+  background-image: url("/assets/images/castle.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -88,6 +88,7 @@ img {
   height: 300px;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
+  overflow: auto;
 }
 
 .message-text {
@@ -205,6 +206,20 @@ input {
   border-radius: 20px;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("/assets/images/castle.png");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 p, 
 a, 
 h1, 
@@ -266,5 +281,3 @@ margin-top: 13%;
   height: 50px;
   width: 50px;
 }
-
-
