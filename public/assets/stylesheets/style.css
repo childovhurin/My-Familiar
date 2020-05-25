@@ -34,7 +34,7 @@ img {
 }
 
 .parallaxabout {
-  background-image: url("public/assets/images/castle.png");
+  background-image: url("/assets/images/castle.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
