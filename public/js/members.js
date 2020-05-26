@@ -27,8 +27,22 @@ $(document).ready(function () {
               if(data[datum].race !== null && data[datum].race.toLowerCase() === "elf") {
                 characterIcon = $("<img src='assets/images/elf_transparent.png'/>")
                 characterIcon.addClass("character-icon");
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
+                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+                characterIcon.addClass("character-icon");
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "orc") {
+                characterIcon = $("<img src='assets/images/orc_transparent.png'/>")
+                characterIcon.addClass("character-icon");
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
+                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+                characterIcon.addClass("character-icon");
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
+                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+                characterIcon.addClass("character-icon");
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
+                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+                characterIcon.addClass("character-icon");
               };
-              
               
               // Create a small card for each character
               let characterCard = $("<div>");
@@ -42,9 +56,7 @@ $(document).ready(function () {
 
             // Routes to view-character page
             $(".character-card").on("click", (e) => {
-
                 window.location.href = "/view-character?charid=" + $(e.target).attr("data-charid");
-              
           });
       });
   });
