@@ -1,0 +1,63 @@
+/* navbar */
+nav {
+    font-family: 'Kelly Slab';
+}
+
+body {
+    background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    perspective: 1px;
+    margin: 0;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Jura';
+}
+
+/* signup div */
+label, a {
+    color: #d1e8e2;
+}
+
+h2 {
+    color: #d9b08c;
+    font-family: 'Kelly Slab';
+}
+p {
+    color: #d9b08c
+}
+
+#signup {
+    color: #777777;
+    background-color: #ffcb9a;
+    font-family: 'Kelly Slab';
+}
+    
+#form-container {
+    margin-top: 13%;
+}
+
+#form-background {
+    margin-bottom: 9%;
+}
+
+form.signup,
+form.login {
+    margin-top: 50px;
+}
+  
+#footer {
+    background-color: #2c3531;
+    font-family: 'Kelly Slab';
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}
+    
+/* Dice */
+.img-dice {
+    height: 50px;
+    width: 50px;
+}
