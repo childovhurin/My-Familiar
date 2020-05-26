@@ -17,29 +17,16 @@ body {
 
 #about {
   padding: 5px;
-<<<<<<< HEAD
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
-  opacity: 1;
-=======
->>>>>>> 7f11bd6c58ad8a0dc34fd7cb8ed2955175020150
 }
 
 #dev {
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
 }
 
-<<<<<<< HEAD
-img {
-  opacity: 1.0;
-  height: 100%;
-  width: 100%;
-}
-=======
->>>>>>> 7f11bd6c58ad8a0dc34fd7cb8ed2955175020150
-
 .parallaxabout {
   background-image: url("/assets/images/castle.png");
-  height: 500px;
+  opacity: .5;
+  height: 450px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +35,8 @@ img {
 
 .parallaxchat {
   background-image: url("/assets/images/whbattle.png");
-  height: 500px;
+  opacity: .5;
+  height: 300px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,7 +45,8 @@ img {
 
 .parallaxmembers {
   background-image: url("/assets/images/createchar.png");
-  height: 500px;
+  opacity: .5;
+  height: 300px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
