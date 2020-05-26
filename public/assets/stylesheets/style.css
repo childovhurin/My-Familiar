@@ -25,7 +25,6 @@ body {
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
 }
 
-
 .parallaxabout {
   background-image: url("/assets/images/castle.png");
   height: 500px;
@@ -231,4 +230,10 @@ a:hover {
 .img-dice {
   height: 50px;
   width: 50px;
+}
+
+#diceDiv {
+  background-color: #2c3531;
+  /* background-color: rgba(44,53,49,1); */
+
 }
