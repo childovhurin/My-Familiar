@@ -2,8 +2,10 @@
 nav {
     font-family: 'Kelly Slab';
 }
+
 body {
-    background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+    background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 100%);
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     perspective: 1px;
@@ -37,18 +39,21 @@ p {
     margin-top: 13%;
 }
 
+#form-background {
+    margin-bottom: 9%;
+}
+
 form.signup,
 form.login {
     margin-top: 50px;
 }
-.login {
-    background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
-    padding: 5px;
-  }
   
-.footer {
+#footer {
     background-color: #2c3531;
     font-family: 'Kelly Slab';
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
 }
     
 /* Dice */
