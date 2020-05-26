@@ -43,7 +43,7 @@ img {
 }
 
 .parallaxchat {
-  background-image: url("/public/assets/images/whbattle.png");
+  background-image: url("/assets/images/whbattle.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -52,7 +52,7 @@ img {
 }
 
 .parallaxlogin {
-  background-image: url("/public/assets/images/loginbg.png");
+  background-image: url("/assets/images/loginbg.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -61,7 +61,7 @@ img {
 }
 
 .parallaxmembers {
-  background-image: url("/public/assets/images/createchar.png");
+  background-image: url("/assets/images/createchar.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -70,7 +70,7 @@ img {
 }
 
 .parallaxsignup {
-  background-image: url("/public/assets/images/battle.png");
+  background-image: url("/assets/images/battle.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
