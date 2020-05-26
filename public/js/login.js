@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  // Removes the userID from localStorage
+  localStorage.removeItem("userID");
   // Getting references to our form and inputs
   var loginForm = $("form.login");
   var emailInput = $("input#email-input");

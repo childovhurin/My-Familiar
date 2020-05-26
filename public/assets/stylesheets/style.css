@@ -1,7 +1,10 @@
 body {
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);opacity:0.6;}  
+  
+body {  
   height: 100%;
   width: 100%;
+  background-repeat: no-repeat;
   perspective: 1px;
   margin: 0;
   transform-style: preserve-3d;
@@ -11,22 +14,30 @@ body {
 }
 
 #navbar {
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  background: #D1E8E2;
 }
 
 #about {
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
   padding: 5px;
+<<<<<<< HEAD
+=======
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+>>>>>>> 6b6b2b180e08a707453475d58d0e923872c569da
 }
 
 #dev {
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
-  padding: 5px;
-  
 }
 
+<<<<<<< HEAD
+=======
+img {
+  opacity: 1.0;
+}
+
+>>>>>>> 6b6b2b180e08a707453475d58d0e923872c569da
 .parallaxabout {
-  background-image: url("public/assets/images/castle.png");
+  background-image: url("/assets/images/castle.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -35,7 +46,7 @@ body {
 }
 
 .parallaxchat {
-  background-image: url("/public/assets/images/whbattle.png");
+  background-image: url("/assets/images/whbattle.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -43,8 +54,20 @@ body {
   background-size: cover;
 }
 
+<<<<<<< HEAD
+=======
+.parallaxlogin {
+  background-image: url("/assets/images/loginbg.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+>>>>>>> 6b6b2b180e08a707453475d58d0e923872c569da
 .parallaxmembers {
-  background-image: url("/public/assets/images/createchar.png");
+  background-image: url("/assets/images/createchar.png");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -52,11 +75,29 @@ body {
   background-size: cover;
 }
 
+<<<<<<< HEAD
+=======
+.parallaxsignup {
+  background-image: url("/assets/images/battle.png");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  padding: 5px;
+}
+
+>>>>>>> 6b6b2b180e08a707453475d58d0e923872c569da
 /*from old css stylesheet*/
 #chat-area {
   height: 300px;
   border-left: 1px solid grey;
   border-right: 1px solid grey;
+  overflow: auto;
 }
 
 .message-text {
@@ -169,6 +210,20 @@ input {
   border-radius: 20px;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("/assets/images/castle.png");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 p, 
 a, 
 h1, 
@@ -184,7 +239,6 @@ h6 {
 a:hover {
   color: #ffcb9a;
 }
-
 
 .button {
   background-color: #d9b08c;
@@ -203,6 +257,7 @@ a:hover {
 
 .footer {
   background-color: #2c3531;
+  bottom: 0;
 }
 
 .login {
@@ -216,5 +271,3 @@ a:hover {
   height: 50px;
   width: 50px;
 }
-
-
