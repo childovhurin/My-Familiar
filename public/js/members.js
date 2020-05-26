@@ -33,14 +33,14 @@ $(document).ready(function () {
               } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "orc") {
                 characterIcon = $("<img src='assets/images/orc_transparent.png'/>")
                 characterIcon.addClass("character-icon");
-              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
-                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "gnome") {
+                characterIcon = $("<img src='assets/images/gnome_transparent.png'/>")
                 characterIcon.addClass("character-icon");
-              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
-                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "dwarf") {
+                characterIcon = $("<img src='assets/images/dwarf_transparent.png'/>")
                 characterIcon.addClass("character-icon");
-              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "human") {
-                characterIcon = $("<img src='assets/images/human_transparent.png'/>")
+              } else if(data[datum].race !== null && data[datum].race.toLowerCase() === "half elf") {
+                characterIcon = $("<img src='assets/images/half_elf_transparent.png'/>")
                 characterIcon.addClass("character-icon");
               };
               
