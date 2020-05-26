@@ -1,7 +1,10 @@
 body {
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);opacity:0.6;}  
+  
+body {  
   height: 100%;
   width: 100%;
+  background-repeat: no-repeat;
   perspective: 1px;
   margin: 0;
   transform-style: preserve-3d;
@@ -11,26 +14,20 @@ body {
 }
 
 #navbar {
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
+  background: #D1E8E2;
 }
 
 #about {
-  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
   padding: 5px;
-  
+  background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
 }
 
 #dev {
   background: radial-gradient(circle, rgba(44,53,49,1) 20%, rgba(17,100,102,1) 87%);
-  padding: 5px;
-  
 }
 
 img {
-  opacity: 0.5;
-  border-style: groove;
-  border-radius: 20px;
-
+  opacity: 1.0;
 }
 
 .parallaxabout {
@@ -236,7 +233,6 @@ a:hover {
   color: #ffcb9a;
 }
 
-
 .button {
   background-color: #d9b08c;
   border: none;
@@ -254,6 +250,7 @@ a:hover {
 
 .footer {
   background-color: #2c3531;
+  bottom: 0;
 }
 
 .login {
