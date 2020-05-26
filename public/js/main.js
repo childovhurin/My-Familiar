@@ -13,8 +13,8 @@ $(document).ready(function () {
     }
     // Verifies that user is logged in
     if(userID === null) {
-        alert("You must be logged in to view this page.")
         window.location.replace("/")
+        alert("You must be logged in to view this page.")
     // If user is logged in and a charID exists (i.e. user is on view-character page),
     // a call is made to API to determine if character belongs to user
     } else if(userID && charID) {
