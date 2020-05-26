@@ -1,7 +1,54 @@
+/* signup-about page */
+#parallaxabout {
+    background-image: url("/assets/images/battle.png");
+    /* opacity: .5; */
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+#paragraph-div {
+    width: 90%;
+    background-color: rgba(44,53,49,.85);
+    border-style: solid;
+    border-color: rgba(217,176,140,.50);
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 5%;
+}
+
+#info-table {
+    width: 90%;
+    background-color: rgba(44,53,49,.85);
+    border-style: solid;
+    border-color: rgba(217,176,140,.50);
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 2%;
+    margin: 5%;
+}
+
+thead {
+    color: #d9b08c;  
+}
+
+tbody {
+    color: #d1e8e2;  
+}
+
+#quote {
+    color: #d1e8e2;
+    font-family: 'Jura';
+}
+
 /* navbar */
-nav {
+#navbar {
     font-family: 'Kelly Slab';
-    background-color: #D1E8E2;
+    background-color: #d1e8e2;
+    opacity: none;
 }
 
 body {
@@ -26,6 +73,12 @@ h2 {
     color: #d9b08c;
     font-family: 'Kelly Slab';
 }
+
+h3 {
+    color: #d1e8e2;
+    font-family: 'Kelly Slab';
+}
+
 p {
     color: #d9b08c
 }
@@ -52,9 +105,10 @@ form.login {
 #footer {
     background-color: #2c3531;
     font-family: 'Kelly Slab';
-    position: fixed; 
+    position: sticky;
     bottom: 0; 
-    width: 100%; 
+    width: 100%;
+    height: fit-content; 
 }
     
 /* Dice */
@@ -62,3 +116,4 @@ form.login {
     height: 50px;
     width: 50px;
 }
+
