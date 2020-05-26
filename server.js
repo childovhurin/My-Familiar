@@ -41,21 +41,23 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // Bot that makes announcements in chat room
-const botName = 'GameBot';
+const botName = 'ChatMaster';
 
 // IO connection for chat
 io.on('connection', socket => {
   console.log('New WS connection');
-  //listen for username
+  
+  // listen for username
   socket.on('newUser', (newUser) => {
       console.log(newUser);
 
-      //welcome current user
+      // Below occurs after a user has input their username
+      // Chat bot welcomes the user
       socket.emit('message', formatMessage(botName, `Welcome to the game room, ${newUser}!`));
-      //broadcast when a user connects
+      // User entrance is broadcasted to the chat
       socket.broadcast.emit('message', formatMessage(botName, 'A user has entered the chat!'));
 
-      //listen for chatMessage
+      // Listener for the chat message
       socket.on('chatMessage', (message) => {
           io.emit('message', formatMessage(newUser, message));
       });
