@@ -19,7 +19,7 @@
     "express-handlebars": "^4.0.4",
     "express-session": "^1.16.1",
     "http": "0.0.1-security",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "mysql": "^2.18.1",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
